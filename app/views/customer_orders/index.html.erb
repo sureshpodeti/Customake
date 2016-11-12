@@ -1,0 +1,43 @@
+<h2>List of Orders </h2>
+<p><%= link_to "Back to Dashboard", customer_profiles_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+<% if @orders.any?%>
+    <% @orders.each do |order| %>
+    <div class="container">
+      <div class="panel panel-default panel-primary">
+        <div class="panel-heading text-center"><b>Order Id</b> : <%=order.id%></div>
+        <div class="panel-body">
+        	<p><b>Ordered at</b> : <%= order.created_at %></p>
+        	<% if order.quotation ==""%>
+        	<% else %>
+        		<p><b>Quotation</b> : <%= order.quotation%></p>
+        	<% end %>
+        	<p><b>Description</b> : <%= order.description %></p>
+        	<p><b>Exepected Delivery Date</b> : <%= order.expected_delivery_date %></p>
+            <p><%= link_to "Show Delivery Address", customer_order_delivery_addresses_path(order)%></p> 
+            <p><%= link_to "Payment details", customer_order_customer_payments_path(order)%></p>
+            <p><%= link_to "Order Status", customer_order_order_statuses_path(order)%></p>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <% end %>
+<% else %>
+ <div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">List of Orders</div>
+    <div class="panel-body">
+         <center><p>You have not placed any orders with us yet !</p></center>
+         <p><%= link_to "Place Order", new_customer_order_path%></p>
+    </div>
+  </div>
+</div>
+<% end %> 
+
+
+
+

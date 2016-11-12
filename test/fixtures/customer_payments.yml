@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1
+  cost_per_piece: 1.5
+  total_cost: 1.5
+  description: MyText
+
+two:
+  quantity: 1
+  cost_per_piece: 1.5
+  total_cost: 1.5
+  description: MyText

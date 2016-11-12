@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quotation: MyString
+  description: MyText
+  quantity: 1
+  expected_delivery_date: 2016-11-12
+  status: MyString
+
+two:
+  quotation: MyString
+  description: MyText
+  quantity: 1
+  expected_delivery_date: 2016-11-12
+  status: MyString

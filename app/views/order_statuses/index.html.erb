@@ -1,0 +1,17 @@
+<h2>Track your order status</h2>
+<p><%= link_to "Back to Dashboard", customer_profiles_path %> | <%= link_to "Back to List of orders", customer_orders_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+<div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">Order Status</div>
+    <div class="panel-body">
+    	 <% if @statuses.blank?%>
+			<p>We are processing your Order...!!</p>
+		<% else %>
+			<p><b>Status</b> : <%= @statuses.status %></p>	
+		<% end %>
+
+    </div>
+  </div>
+</div>

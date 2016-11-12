@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center"><h5><b>Welcome <%= current_customer.customer_name %> to order section !!</b></h5></div>
+  </div>
+</div>
+
+
+
+<%= simple_form_for @order, url: customer_orders_path, html: { multipart: true } do |f| %>
+  <%= f.label :artifact %>
+  <%= f.file_field :artifact %>
+  <br>	
+  <%= f.input :quotation %>
+  <%= f.input :description %>
+  <%= f.input :quantity%>
+   <%= f.input :expected_delivery_date%>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+

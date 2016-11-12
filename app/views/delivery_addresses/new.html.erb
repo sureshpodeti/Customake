@@ -1,0 +1,6 @@
+<h2>Delivery Address</h2>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+<%= simple_form_for([@order,@address]) do |f| %>
+  <%= f.input :address %>
+  <%= f.button :submit %>
+<% end %>

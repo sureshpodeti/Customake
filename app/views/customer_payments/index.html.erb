@@ -1,0 +1,20 @@
+<h2>Payment Section </h2>
+<p><%= link_to "Back to Dashboard", customer_profiles_path %> | <%= link_to "Back to List of orders", customer_orders_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+<div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">Payment Details</div>
+    <div class="panel-body">
+    	 <% if @payments.blank?%>
+			<p>we will update you soon</p>
+		<% else %>
+			<p><b>No of Items</b> : <%= @payments.quantity %></p>
+			<p><b>Cost per Piece</b> : <%= @payments.cost_per_piece %></p>
+			<p><b>Total amount payable</b> : <%= @payments.total_cost %></p>
+			<p><b>Description</b> : <%= @payments.description %></p>	
+		<% end %>
+
+    </div>
+  </div>
+</div>
