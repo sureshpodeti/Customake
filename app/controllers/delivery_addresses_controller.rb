@@ -16,6 +16,7 @@ class DeliveryAddressesController < ApplicationController
 		@address=@order.create_delivery_address(address_params)
 		@address.customer_order_id=params[:customer_order_id]
 		if @address.save
+			flash[:success] = "your Order placed successfully!"
 			redirect_to customer_profiles_path
 		else
 			redirect_to new_customer_order_delivery_address_path(@order)

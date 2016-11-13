@@ -1,0 +1,22 @@
+
+
+
+
+<div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center"><b>Manufacturer Address</b></div>
+    <div class="panel-body">
+    	<p><b>Manufacturer Name</b> :<%= current_manufacturer.manufacturer_name%></p>
+    	<p><b>Manufacturing Unit Name</b> :<%= current_manufacturer.manufacturing_unit_name%></p>
+    	<p><b>Address</b> :<%= current_manufacturer.address%></p>
+    	<p><b>Mobile Number</b> :<%= current_manufacturer.mobile_num%></p>
+    	<p><b>Email</b> :<%= current_manufacturer.email%></p>
+    	<br>
+    	<p><%= link_to "Edit Details", edit_manufacturer_registration_path %></p>
+      <p><%= link_to "Back to Dashboard",manufacturer_profiles_path %></p>
+    
+    </div>
+      
+
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module ManufacturerPaymentsHelper
+end

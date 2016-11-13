@@ -1,0 +1,22 @@
+<h2>Order status</h2>
+<p><%= link_to "Back to Dashboard", manufacturer_profiles_path %> | <%= link_to "Back to List of orders", manufacturer_orders_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+
+
+
+<div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">Order Status</div>
+    <div class="panel-body">
+    	 <% if @statuses.blank?%>
+			<p>You have not created status yet !. please click on the below link to update</p>
+      <p><%= link_to "Create Status", new_manufacturer_order_manufacturer_status_path(@order)%></p>
+		<% else %>
+			<p> <%= @statuses.status %></p>	
+      <p><%= link_to "Update Status", edit_manufacturer_order_manufacturer_status_path(@order,@statuses)%></p>
+		<% end %>
+
+    </div>
+  </div>
+</div>

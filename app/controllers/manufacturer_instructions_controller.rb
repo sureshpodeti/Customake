@@ -1,0 +1,3 @@
+class ManufacturerInstructionsController < ApplicationController
+	before_action :authenticate_manufacturer!
+end

@@ -1,0 +1,15 @@
+<h2>Update Status Section </h2>
+<p><%= link_to "Back to Dashboard", manufacturer_profiles_path %> | <%= link_to "Back to List of orders", manufacturer_orders_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+<div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">Update Order Status Details</div>
+    <div class="panel-body">
+    	<%= simple_form_for([@order,@status]) do |f| %>
+		  <%= f.input :status %>
+		  <%= f.button :submit %>
+		<% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module ManufacturerStatusesHelper
+end

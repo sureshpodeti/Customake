@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center"><h5><b>Welcome <%= current_manufacturer.manufacturer_name %> !!</b></h5></div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<div class="panel panel-default">
+			    <div class="panel-body text-center">
+			    <%= link_to manufacturer_instructions_path  do %>
+				    <i class="fa fa-question-circle fa-4x" aria-hidden="true"></i>
+				<% end%>
+			    </div>
+			    <div class="panel-footer text-center">How to proceed?</div>
+  			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			    <div class="panel-body text-center">
+			    <%= link_to manufacturer_addresses_path do %>
+				    <i class="fa fa-address-card fa-4x" aria-hidden="true"></i>
+				<% end%>
+			    
+			    </div>
+			    <div class="panel-footer text-center">Address</div>
+  			</div>
+		</div>
+	</div>	
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<div class="panel panel-default">
+			    <div class="panel-body text-center">
+			    <%= link_to manufacturer_orders_path do %>
+				    <i class="fa fa-list-ul fa-4x" aria-hidden="true"></i>
+				<% end%>  
+			    </div>
+			    <div class="panel-footer text-center">List of Orders</div>
+  			</div>
+		</div>
+
+			<div class="col-md-4">
+			<div class="panel panel-default">
+			    <div class="panel-body text-center">
+				    <%= link_to destroy_manufacturer_session_path , method: :delete, data: {confirm: "Are you sure you want to Sign Out?"} do %>
+				    <i class="fa fa-sign-out fa-4x" aria-hidden="true"></i>
+				    <% end%>
+			    </div>
+			    <div class="panel-footer text-center">LogOut</div>
+  			</div>
+		</div>
+	</div>	
+</div>
+
+
+

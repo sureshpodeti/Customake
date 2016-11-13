@@ -1,0 +1,51 @@
+<h2>List of Orders </h2>
+<p><%= link_to "Back to Dashboard", manufacturer_profiles_path %></p>
+<hr style="width: 100%; color: black; height: 1px; background-color:black;">
+
+<% if @orders.any?%>
+    <% @orders.each do |order| %>
+    <div class="container">
+      <div class="panel panel-default panel-primary">
+        <div class="panel-heading text-center"><b>Order Id</b> : <%=order.id%></div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-4">
+              <p><b>Quotation</b> : <%= order.quotation %></p>
+              <p><b>Description</b> : <%= order.description %></p>
+              <p><b>Exepected Delivery Date</b> : <%= order.expected_delivery_date %></p>
+              <br>
+              <p><%= link_to "Order Payment details", manufacturer_order_manufacturer_payments_path(order)%></p>
+              <p><%= link_to "Update Status", manufacturer_order_manufacturer_statuses_path(order)%></p>
+            </div>
+            <div class="col-md-4">
+              <p><%= image_tag(order.artifact.url, :size => "180x180" )%></p>
+              
+
+            </div>
+            
+          </div>
+          
+        	
+  
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <% end %>
+<% else %>
+ <div class="container">
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading text-center">List of Orders</div>
+    <div class="panel-body">
+         <center><p>You have not received any orders yet !</p></center>
+    </div>
+  </div>
+</div>
+<% end %> 
+
+
+
+
