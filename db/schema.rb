@@ -10,7 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113192420) do
+ActiveRecord::Schema.define(version: 20161116195014) do
+
+  create_table "competition_submissions", force: :cascade do |t|
+    t.integer  "competitor_id"
+    t.integer  "competition_task_id"
+    t.integer  "points_earned"
+    t.boolean  "submitted_status"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "artifact_file_name"
+    t.string   "artifact_content_type"
+    t.integer  "artifact_file_size"
+    t.datetime "artifact_updated_at"
+  end
+
+  create_table "competition_tasks", force: :cascade do |t|
+    t.text     "description"
+    t.date     "deadline"
+    t.boolean  "current_task",          default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "artifact_file_name"
+    t.string   "artifact_content_type"
+    t.integer  "artifact_file_size"
+    t.datetime "artifact_updated_at"
+  end
+
+  create_table "competitors", force: :cascade do |t|
+    t.string   "username"
+    t.string   "college_name"
+    t.string   "mobile_num"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_competitors_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_competitors_on_reset_password_token", unique: true
+  end
 
   create_table "customer_orders", force: :cascade do |t|
     t.integer  "customer_id"

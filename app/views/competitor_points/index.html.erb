@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="col-md-4 col-md-offset-4">
+		<div class="panel panel-primary">
+	    <div class="panel-heading text-center">Coins</div>
+	    <div class="panel-body text-center">
+	    	<% points=0 %>
+	    	<% @records.each do |record|%>
+	    		<% points=points+ record.points_earned %>
+	    	<% end %>
+	    	<% if points>0 %>
+	    		<b><%=points %></b>
+	    	<% else %>
+	    		<b>You have not earned any points !!</b>
+	    	<% end %>
+
+	    	<br><br>
+	    	<p><%= link_to "Back to Dashboard",competitor_profiles_path %></p>	
+	    </div>
+	  </div>	
+
+
+	</div>
+</div>
+
+<br>
+<div class="container">
+	<h3 style="color:green;">Information on earning points</h3>
+	<hr style="width: 100%; color: black; height: 1px; background-color:black;" >
+	<ul>
+		<li> If you participate and submit to a task, you will earn 1 coin per each successful submission </li><br>
+		<li> We will rate best 3 submissions with the more coins </li><br>
+		<li> First winner credited with more 10 coins, 2nd with 5 more coins, and 3rd with 3 more coins</li><br>
+		<li> If your coins value reach to 200 we will give you a t-shirt</li><br>
+	</ul>
+</div>

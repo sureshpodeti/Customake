@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="panel panel-primary ">
+    <div class="panel-heading text-center">Competition Task</div>
+    <div class="panel-body">
+    <% if @tasks.any?%>
+    		<% status=false %>
+	    <% @tasks.each do |task|%>
+	    	<% if task.current_task == true %>
+	    		<% status=true%>
+	    		<p><%= task.description %></p>
+	    		<br>
+	    		<p><%= link_to "Submit your design", competition_task_competition_submissions_path(task)%></p>	
+	    	<% end %>	
+
+	    <% end %>
+		<%if status == false %>
+		<p>No competition is running at this moment !!</p
+		<% end %>
+	<% else %>
+		<p>No competition is running at this moment !!</p>	
+	<%end %>    
+	<p><%= link_to "Back to Dashboard", competitor_profiles_path %></p>
+    </div>
+  </div>
+</div>

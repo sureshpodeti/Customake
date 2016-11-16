@@ -1,0 +1,2 @@
+class CompetitionInstructionsController < ApplicationController
+end

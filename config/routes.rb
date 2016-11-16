@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :competitors, :controllers => {registrations: 'registrations'}
   devise_for :manufacturers, :controllers => {registrations: 'registrations'}
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :customers, :controllers => {registrations: 'registrations'}
@@ -24,6 +25,13 @@ Rails.application.routes.draw do
 	resources :manufacturer_addresses, only: [:index]
 	resources :contacts, only: [:index]
 	resources :careers, only: [:index]
+	resources :competition_instructions, only: [:index]
+	resources :competition_tasks, only: [:index] do
+		resources :competition_submissions
+	end	
+	resources :competitor_points, only: [:index]
+
+	resources :competitor_profiles, only: [:index]
 	root "homepage#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

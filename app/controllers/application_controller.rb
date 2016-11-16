@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
       Manufacturer::ParameterSanitizer.new(Manufacturer, :manufacturer, params)
     elsif resource_class == Customer
           Customer::ParameterSanitizer.new(Customer, :customer, params)
+    elsif resource_class == Competitor
+      Competitor::ParameterSanitizer.new(Competitor, :competitor, params)        
     else
       super # Use the default one
     end
@@ -17,6 +19,8 @@ class ApplicationController < ActionController::Base
         "/manufacturer_profiles"
       elsif resource_class == Customer    
         "/customer_profiles"
+      elsif resource_class == Competitor
+        "/competitor_profiles"            
       end  
   	end	
 

@@ -1,0 +1,2 @@
+module CompetitorProfilesHelper
+end
