@@ -5,7 +5,7 @@ class Manufacturer < ApplicationRecord
   validates_presence_of :manufacturer_name, :manufacturing_unit_name, :address, :mobile_num
   validates_uniqueness_of :mobile_num, :manufacturing_unit_name, :address
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :timeout_in => 15.minutes
 end
 
 

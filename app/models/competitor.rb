@@ -4,7 +4,7 @@ class Competitor < ApplicationRecord
   validates_presence_of :username, :college_name, :mobile_num
   validates_uniqueness_of :mobile_num, :username
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :timeout_in => 15.minutes
 end
 
 class Competitor::ParameterSanitizer < Devise::ParameterSanitizer

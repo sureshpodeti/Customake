@@ -5,7 +5,7 @@ class Customer < ApplicationRecord
   validates_uniqueness_of :customer_name, :mobile_num
   has_many :customer_orders
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :timeout_in => 15.minutes
 end
 
 

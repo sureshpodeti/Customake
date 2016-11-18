@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  winner_name: MyString
+  college: MyString
+  position: 1
+
+two:
+  winner_name: MyString
+  college: MyString
+  position: 1

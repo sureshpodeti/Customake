@@ -1,10 +1,28 @@
+    <!-- section for scrolling messages-->
+  <% if @messages.any? %>
+    <% @messages.each do |msg|%>
+        <% if msg.current_msg == true %>
+        <marquee behavior="scroll" direction="left" scrollamount="9"> <p style="color:red;"><b>
+        <%= msg.scroll_msg%>
+        </b></p></marquee>
+          <% break%>
+        <% end %>
+    <% end %>
+  <% end %>        
+      
+  
+    
+  <!-- scrolling section ends here -->
+
+
+
     <!-- Page Content -->
     <div class="container">
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <h1>Welcome to Customake !</h1>
-            <p>CustoMake ensures you own a t-shirt of your style and choice. We also help you discover your designing skills with an amazing platform through online competitions. You are one step closer to the future of t-shirt services.</p>
+            <h2 style="color:black;"><b>Welcome to Competition-driven customerized products !</b></h2><hr>
+            <p>CustoMake ensures you own a t-shirt of your style and choice. We also help you discover your desiging skills with an amazing platform through online competitions. You are one step closer to the future of t-shirt services.</p>
         </header>
 
         <hr>
@@ -19,47 +37,41 @@
 
         <!-- Page Features -->
         <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Suresh Podeti</h5>
-                        <p>I.I.T Kharagpur</p>
-                    </div>
+            <% i=1 %>
+            <% @winners.each do |winner| %>
+                <div class="col-md-3 col-sm-6 hero-feature">
+                        
+                            <% if winner.position==i %>
+                                <div class="thumbnail">
+                                    <%= image_tag(winner.artifact, :size => '400x100', :crop => :fill )%>
+                                    <div class="caption">
+                                        <h5> 
+                                            
+                                               By <%= winner.winner_name%>
+                                        </h5>
+                                        <p><%= winner.college %></p>
+                                    </div>
+                                </div>
+                                <% end %>                        
                 </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Omkar Mypati</h5>
-                        <p>N.I.T Warangal</p>
-                    </div>
-                </div>
-            </div>
+                <% if i>5 %>
+                    <% break %>
+                <% end %>    
+                    <% i=i+1 %>
+            <% end %>  
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Vamshi krishna</h5>
-                        <p>JNTU Hyd</p>
-                    </div>
-                </div>
-            </div>
+        </div>    
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Harish Podeti</h5>
-                        <p>Vardhaman college</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+            
         <hr>
         <!-- second half goes here ..-->
         
@@ -75,53 +87,186 @@
 
         <!-- Page Features -->
         <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Suresh Podeti</h5>
-                        <p>I.I.T Kharagpur</p>
+            <div class="col-md-3 col-sm-6 hero-feature"> 
+              <div class="panel panel-success">
+                    <div class="panel-heading">Group Offer</div>
+                    <div class="panel-body">
+                        <p><b>5%</b> DISCOUNT on bulk orders</p> <p>(5 no.s and more)</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Omkar Mypati</h5>
-                        <p>N.I.T Warangal</p>
-                    </div>
-                </div>
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Vamshi krishna</h5>
-                        <p>JNTU Hyd</p>
+                <div class="panel panel-success">
+                    <div class="panel-heading">Competition Offers</div>
+                    <div class="panel-body">
+                        <b>10</b> coins awarded for each succussful submission for each particular task
                     </div>
                 </div>
+
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h5>By Harish Podeti</h5>
-                        <p>Vardhaman college</p>
+                <div class="panel panel-success">
+                    <div class="panel-heading">Competitor Offers</div>
+                    <div class="panel-body">
+                        <b>5%</b> DISCOUNT if you participate in atleast one competition and order through our portal 
                     </div>
                 </div>
+
             </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Reward Coins</div>
+                    <div class="panel-body">
+                        <p>With <b>500</b> Coins you can order a </p><p>T-shirt for free on our website  </p>
+                    </div>
+                </div>
+
             </div>
+        </div>    
 
             <!-- workflow section starts here-->
             <hr>
-            <div class="container">
-                <h2>work flow</h2>
-
-
-
+  
+  
+ 
+ <!-- our services and products-->
+ <div class="container bootstrap snippet">
+<section id="services" class="current">
+    <div class="services-top">
+        <div class="container bootstrap snippet">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-md-12">
+                    <h2>What We Offer</h2>
+                    <h2 style="font-size: 50px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Products and Services</h2>
+                    <p>We follow Competition-driven customerization approach</p>
+                </div>
             </div>
+            <br>
+            <div class="row">
+                <div class=" col-sm-12 col-md-12 col-md-12">
+                    <div class="services-list">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-md-4">
+                                <div class="service-block" style="visibility: visible;">
+                                    <div class="ico fa fa-product-hunt highlight"></div>
+                                    <div class="text-block">
+                                        <div class="name"><h4 style="color:blue;">Our Products</h4></div>
+                                        <div class="text">
+                                            <p>Our Main products are:  </p>
+                                        <p>
+                                            <ul>
+                                                <li>T-shirts (Both Round neck and Collar) </li>
+                                                <li>Sweatshirts</li>
+                                                <li>Poster / Logo Design</li>
+                                            </ul>
+                                        </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-md-4">
+                                <div class="service-block" style="visibility: visible;">
+                                    <div class="ico fa fa-users highlight"></div>
+                                    <div class="text-block">
+                                        <div class="name"><h4 style="color:blue;">Bulk Order</h4></div>
+                                        <div class="text">
+                                        <p>We accept bulk orders in general. Minimum quantity to place an order without delivery charges is 5. You can place an order by logging into the Order section, You can upload already existing design or ask us to provide a design by giving your requirement description. We may launch a competition based on your requirement to get best of the best designs for you. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-md-4">
+                                <div class="service-block" style="visibility: visible;">
+                                    <div class="ico fa fa-cogs highlight"></div>
+                                    <div class="text-block">
+                                        <div class="name"><h4 style="color:blue;">Manufacturing With Us</h4></div>
+                                        <div class="info">
+                                            <p>You can collaborate your manufacturing business by registering with us at manufacture section. Since our business is competition-driven customerization you will have great business deal with us</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><br>
+                        <div class="row">    
+                            <div class="col-sm-4 col-md-4 col-md-4">
+                                <div class="service-block" style="visibility: visible;">
+                                    <div class="ico fa fa-pencil highlight"></div>
+                                    <div class="text-block">
+                                        <div class="name"><h4 style="color:blue;">Competitions</h4></div>
+                                        <div class="text">
+                                        <p>We launch competitions frequently in each month. If you are creative you can get attractive rewards by participating in competitions. We offer 10 coins for each successful submission for a particular task and additional coins for top 3 designs.</p> <p>we are excited to inform you that If you score 500 points you can order a product from our website. 5% Discount if you buy any product from our website  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4 col-md-4 col-md-4">
+                                <div class="service-block" style="visibility: visible;">
+                                    <div class="ico fa fa-bolt highlight"></div>
+                                    <div class="text-block">
+                                        <div class="name"><h4 style="color:blue;">Trending Designs</h4></div>
+                                        <div class="text">
+                                        <p>We launch competitions on trending topics to get best models which suite current requirement of many. If you got bored of t-shirt designs this is the place you should look for. </p>
+                                        <p>
+                                            If you want designs on a particular topic just log into the portal and place an order / share your thought we will help you out to get the exact design
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+<!-- products and services section ends here-->
+<hr>
+
+<!-- About Us section starts here-->
+    <div class="container">
+     <div><h3>About Us</h3></div><br>
+     <div>
+     <h4 style="color:blue;">Our background</h4>
+     Building websites for several years has given us an appreciation for the time and effort it takes to create beautiful work. We also understand the value of using themes & templates to kickstart the design & development process.
+
+We love Bootstrap. It's easy to learn, customize, and great for rapid development of responsive websites. Whether you're a seasoned developer/designer or someone learning the basics of web design and development, Bootstrap is great way to get started with all of its out-of-the-box components.
+
+Bootstrap has come a long way and we wanted to create an amazing marketplace for Bootstrap enthusiasts like ourselves.
+
+
+     </div>
+
+     <div>
+         <h4 style="color:blue;">Our Mission</h4>
+         To be able to meet the need of individual personalization / customerization
+
+     </div>
+
+     <div>
+         <h4 style="color:blue;">Our Values</h4>
+         When we started this marketplace, we wanted to place a high level of importance on three core values we felt were essential. These core values shape how we operate our company and how we make all of our decisions.
+
+<h5 >Superior Quality</h5>
+
+All of our themes go through an extensive review process. Not only do we require a minimum design standard, but we also dig through the code of each theme to ensure that no errors are present. Rest assured that every theme listed on our marketplace is properly vetted by our team and worthy of being used in your next project.
+
+<h5>Outstanding Support</h5>
+
+We place a great deal of importance on offering outstanding customer support to ensure our marketplace runs smoothly.
+
+<h5>A Focus on Community</h5>
+
+Without our amazing community of buyers and sellers, this marketplace would not exist. Every feature we build and every decision we make is with the goal of improving our community and offering additional value to our members.
+
+     </div>
+
+    </div>
+
+
+<!-- About Us section ends here-->                            

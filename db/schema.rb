@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116195014) do
+ActiveRecord::Schema.define(version: 20161118191116) do
 
   create_table "competition_submissions", force: :cascade do |t|
     t.integer  "competitor_id"
@@ -35,6 +35,26 @@ ActiveRecord::Schema.define(version: 20161116195014) do
     t.string   "artifact_content_type"
     t.integer  "artifact_file_size"
     t.datetime "artifact_updated_at"
+  end
+
+  create_table "competition_winners", force: :cascade do |t|
+    t.string   "winner_name"
+    t.string   "college"
+    t.integer  "position"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "artifact_file_name"
+    t.string   "artifact_content_type"
+    t.integer  "artifact_file_size"
+    t.datetime "artifact_updated_at"
+  end
+
+  create_table "competitor_coins", force: :cascade do |t|
+    t.integer  "competitor_id"
+    t.integer  "competition_task_id"
+    t.integer  "points_earned"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "competitors", force: :cascade do |t|
@@ -167,6 +187,13 @@ ActiveRecord::Schema.define(version: 20161116195014) do
     t.string   "status"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "scroll_messages", force: :cascade do |t|
+    t.text     "scroll_msg"
+    t.boolean  "current_msg"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

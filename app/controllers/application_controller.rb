@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  
+
   def devise_parameter_sanitizer
     if resource_class == Manufacturer
       Manufacturer::ParameterSanitizer.new(Manufacturer, :manufacturer, params)

@@ -1,0 +1,2 @@
+class ScrollMessage < ApplicationRecord
+end

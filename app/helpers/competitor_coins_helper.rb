@@ -1,0 +1,2 @@
+module CompetitorCoinsHelper
+end

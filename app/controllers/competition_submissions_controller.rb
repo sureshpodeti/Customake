@@ -30,6 +30,9 @@ class CompetitionSubmissionsController < ApplicationController
 		@submission.competitor_id=current_competitor.id
 		# @submission[:submitted_status]=true
 		if @submission.save && ! @submission.submitted_status == true
+			values={ "competitor_id" => current_competitor.id, "competition_task_id" => @task.id, "points_earned" => 10 }
+			@coin=CompetitorCoin.new(values)
+			@coin.save
 			@submission.update(:submitted_status => true)
 			@submission.update(:points_earned => 1)
 			redirect_to competitor_profiles_path

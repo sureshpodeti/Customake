@@ -1,0 +1,2 @@
+class CompetitorCoin < ApplicationRecord
+end

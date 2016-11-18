@@ -29,9 +29,11 @@ Rails.application.routes.draw do
 	resources :competition_tasks, only: [:index] do
 		resources :competition_submissions
 	end	
-	resources :competitor_points, only: [:index]
-
+	resources :competitor_coins, only: [:index]
+	# resources :competition_winners
 	resources :competitor_profiles, only: [:index]
+	resources :products, only: [:index]
+	resources :about_us, only: [:index]
 	root "homepage#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
