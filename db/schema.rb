@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161118191116) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "competition_submissions", force: :cascade do |t|
     t.integer  "competitor_id"
     t.integer  "competition_task_id"
@@ -73,8 +76,8 @@ ActiveRecord::Schema.define(version: 20161118191116) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_competitors_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_competitors_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_competitors_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_competitors_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "customer_orders", force: :cascade do |t|
@@ -104,9 +107,9 @@ ActiveRecord::Schema.define(version: 20161118191116) do
 
   create_table "customers", force: :cascade do |t|
     t.boolean  "admin"
-    t.string   "customer_name",          default: "", null: false
-    t.string   "organization_name",      default: "", null: false
-    t.string   "mobile_num",             default: "", null: false
+    t.string   "customer_name"
+    t.string   "organization_name"
+    t.string   "mobile_num"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -119,8 +122,8 @@ ActiveRecord::Schema.define(version: 20161118191116) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_customers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_customers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "delivery_addresses", force: :cascade do |t|
@@ -178,8 +181,8 @@ ActiveRecord::Schema.define(version: 20161118191116) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
-    t.index ["email"], name: "index_manufacturers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_manufacturers_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_manufacturers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_manufacturers_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "order_statuses", force: :cascade do |t|
