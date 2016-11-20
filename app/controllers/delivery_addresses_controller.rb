@@ -24,7 +24,23 @@ class DeliveryAddressesController < ApplicationController
 	end
 
 	def show
-	end	
+	end
+
+	def edit 
+	end 	
+
+	def update
+		@order=CustomerOrder.find(params[:customer_order_id])
+	    @addresses=@order.delivery_address
+
+	    if @addresses.update_attributes(address_params)
+	      flash[:success] = "Your Deliery Address updated successfully!"
+	      redirect_to customer_order_delivery_addresses_path(@order)
+	    else
+	      render 'edit'
+	    end
+  	end
+
 
 	private
 
@@ -34,6 +50,7 @@ class DeliveryAddressesController < ApplicationController
 
 
 	def get_data
+		@order=CustomerOrder.find(params[:customer_order_id])
 		@address=DeliveryAddress.find(params[:id])
 	end	
 

@@ -15,6 +15,7 @@
         	<% end %>
         	<p><b>Description</b> : <%= order.description %></p>
         	<p><b>Exepected Delivery Date</b> : <%= order.expected_delivery_date %></p>
+            <p><%= link_to "Change Order", edit_customer_order_path(order)%> | <%= link_to "Cancel Order", customer_order_path(order), method: :delete %></p> 
             <p><%= link_to "Show Delivery Address", customer_order_delivery_addresses_path(order)%></p> 
             <p><%= link_to "Payment details", customer_order_customer_payments_path(order)%></p>
             <p><%= link_to "Order Status", customer_order_order_statuses_path(order)%></p>
@@ -37,7 +38,9 @@
   </div>
 </div>
 <% end %> 
-
+<% (0..8).each do |i|%>
+  <br>
+<% end %>
 
 
 

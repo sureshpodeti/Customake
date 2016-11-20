@@ -1,0 +1,31 @@
+
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center"><h5><b>Welcome <%= current_customer.customer_name %> to order section !!</b></h5></div>
+  </div>
+</div>
+
+<div class="container" style="background-color:#F8F8F8;">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= simple_form_for @order, html: { multipart: true } do |f| %>
+  <%= f.label :artifact %>
+  <%= f.file_field :artifact %>
+  <br>	
+  <%= f.input :quotation %>
+  <%= f.input :description %>
+  <%= f.input :quantity%>
+   <%= f.input :expected_delivery_date%>
+  <%= f.button :submit %>
+<% end %>
+<br>
+<b><%= link_to "Back to DashBoard", customer_profiles_path %></b>
+<br><br>
+</div>
+</div>
+
+
+<% (0..5).each do |i|%>
+  <br>
+<% end %>

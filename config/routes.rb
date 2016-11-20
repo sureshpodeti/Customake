@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 	resources :competitor_profiles, only: [:index]
 	resources :products, only: [:index]
 	resources :about_us, only: [:index]
+	resources :best_designs, only: [:index]
+	
 	root "homepage#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

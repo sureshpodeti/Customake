@@ -1,6 +1,19 @@
+<% (0..3).each do |i|%>
+  <br>
+<% end %>
+<div class="container" style="background-color:#F8F8F8;">
+  <div class="col-md-6 col-md-offset-3">
 <h2>Delivery Address</h2>
 <hr style="width: 100%; color: black; height: 1px; background-color:black;">
 <%= simple_form_for([@order,@address]) do |f| %>
   <%= f.input :address %>
   <%= f.button :submit %>
+<% end %>
+<br>
+<b><%= link_to "Back to DashBoard", customer_profiles_path %></b>
+<br><br>
+</div>
+</div>
+<% (0..8).each do |i|%>
+  <br>
 <% end %>

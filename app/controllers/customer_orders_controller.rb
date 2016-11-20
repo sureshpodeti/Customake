@@ -21,6 +21,30 @@ class CustomerOrdersController < ApplicationController
 		end
 	end
 	
+	def edit
+		@order=CustomerOrder.find(params[:id])
+	end
+	
+	def destroy
+		@order=CustomerOrder.find(params[:id])
+		if @order.destroy
+			flash[:success] = "Your order has been cancelled successfully!"
+			redirect_to customer_orders_path
+		else
+			flash[:danger] = "Error in cancelling your order !"
+		end		
+	end	
+
+	def update
+		@order=CustomerOrder.find(params[:id])
+	    if @order.update_attributes(order_params)
+	    	flash[:success] = "You order details Updated successfully!"
+	    	redirect_to customer_orders_path
+    	else
+    		flash[:error] = "Description, Quantity, and expected delivery date fileds are mandatory"
+      		render 'edit'
+    	end
+	end	
 	private
 	def order_params
 		params.require(:customer_order).permit(:customer_id, :artifact, :quotation, :description, :quantity, :expected_delivery_date, :status)

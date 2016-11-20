@@ -5,8 +5,13 @@
   <div class="panel panel-default panel-primary">
     <div class="panel-heading text-center">Delivery Address</div>
     <div class="panel-body">
-    	 <h2>show from delivery address show.html.erb</h2>
-		<p>suresh<%= @address.address %></p> 
+    	<% if @address.address.any?%>
+
+	    	 <h2>show from delivery address show.html.erb</h2>
+			<p>suresh<%= @address.address %></p> 
+		<% else %>
+			<p>not given address</p>
+		<% end %>	
 
     </div>
   </div>
