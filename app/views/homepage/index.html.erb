@@ -2,7 +2,7 @@
   <% if @messages.any? %>
     <% @messages.each do |msg|%>
         <% if msg.current_msg == true %>
-        <marquee behavior="scroll" direction="left" scrollamount="9"> <p style="color:red;"><b>
+        <marquee behavior="scroll" direction="left" scrollamount="5"> <p style="color:red;"><b>
         <%= msg.scroll_msg%>
         </b></p></marquee>
           <% break%>
