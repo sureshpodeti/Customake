@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;"">
+  <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;">
   <br>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -55,41 +55,72 @@
           </div><br>
  
           <%= yield %>
-          <footer class="container-fluid bg-4 text-center" style="width:100%;background-color:black;color:white;">
-      <div class="container">
-        <div class="row">
-        <div class="col-sm-2">
-          <p>Copyright &copy; 2016 <b>NthPointDesign</b></p>
-        </div><!-- end col-sm-2-->
-        <div class="col-sm-4">
-        <h6>About us</h6>
-        <p>NthPointDesign ensures you own a t-shirt of your style and choice. We also help you discover your designing skills with an amazing platform through online competitions. You are one step closer to the future of t-shirt services. </p>
-        </div><!--end col-sm-4-->
-        <div class="col-sm-2">
-        <h6>Navigation</h6>
-        <ul class="unstyled">
-          <li><%= link_to "Order", customer_profiles_path %></li>
-          <li><%= link_to "Manufacture", manufacturer_profiles_path  %></li>
-          <li><%= link_to "Competitions", competitor_profiles_path %></li>
-          <li><%= link_to "Careers",careers_path %></li>
-          
-        </ul>
-        </div> <!--end col-sm-2-->
-        <div class="col-sm-2">
-        <h6>Contact Us</h6>
-       <p>nthpointdesign@gmail.com</p>
-       <p>Contact:+91-9886100232</p>
-        </div> <!--end col-sm-2-->
-        <div>
-          <h6>All rights reserved. </h6>
-        </div><!--end col-sm-2-->
-        </div><!-- end row-->
-      </div><!-- end container-->
+           </div>
 
-    </footer>
+      </div>
+
+
+            <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+    
+        <%= image_tag("logo.jpg", :size => '120x120') %>
+
+        <p class="footer-links">
+          <%= link_to "Home", root_path %>
+          ·
+          <%= link_to "Order", customer_profiles_path %>
+          ·
+          <%= link_to "Manufacture", manufacturer_profiles_path%>
+
+          ·
+          <%= link_to "Competitions", competitor_profiles_path%>
+
+          ·
+          <%= link_to "Careers", careers_path%>
+        </p>
+
+        <p class="footer-company-name">NthPointDesign © 2016</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>87/2, 6th cross, 2nd main, SG Palya</span> Bengaluru-560029</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91-9886100232</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>nthpointdesign@gmail.com</p>
         </div>
 
       </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          NthPointDesign ensures you own a t-shirt of your style and choice. We also help you discover your desiging skills with an amazing platform through online competitions. You are one step closer to the future of t-shirt services.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+    
 
     
   </body>

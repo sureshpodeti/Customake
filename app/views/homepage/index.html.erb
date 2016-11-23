@@ -17,7 +17,7 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
@@ -39,7 +39,7 @@
         <div class="row text-center">
             <% i=1 %>
             <% @winners.each do |winner| %>
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="polaroid col-md-3 col-sm-6 hero-feature">
                         
                             <% if winner.position==i %>
                                 <div class="thumbnail">
@@ -82,13 +82,14 @@
                 <h3>Best Offers</h3>
             </div>
         </div>
+        </div>
         <!-- /.row -->
 
 
         <!-- Page Features -->
         <div class="row text-center">
-            <div class="col-md-3 col-sm-6 hero-feature"> 
-              <div class="panel panel-success">
+            <div class="col-md-3 col-sm-6 hero-feature" > 
+              <div class="panel panel-success"style="box-shadow: 10px 10px grey;">
                     <div class="panel-heading">Group Offer</div>
                     <div class="panel-body">
                         <p><b>5%</b> DISCOUNT on bulk orders</p> <p>(5 no.s and more)</p>
@@ -98,7 +99,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="panel panel-success">
+                <div class="panel panel-success"style="box-shadow: 10px 10px grey;">
                     <div class="panel-heading">Competition Offers</div>
                     <div class="panel-body">
                         <b>10</b> coins awarded for each succussful submission for each particular task
@@ -108,7 +109,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="panel panel-success">
+                <div class="panel panel-success"style="box-shadow: 10px 10px grey;">
                     <div class="panel-heading">Competitor Offers</div>
                     <div class="panel-body">
                         <b>5%</b> DISCOUNT if you participate in atleast one competition and order through our portal 
@@ -118,7 +119,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="panel panel-success">
+                <div class="panel panel-success"style="box-shadow: 10px 10px grey;">
                     <div class="panel-heading">Reward Coins</div>
                     <div class="panel-body">
                         <p>With <b>500</b> Coins you can order a </p><p>T-shirt for free on our website  </p>
@@ -137,23 +138,25 @@
  <div class="container bootstrap snippet">
 <section id="services" class="current">
     <div class="services-top">
-        <div class="container bootstrap snippet">
+        <div class="container bootstrap snippet" >
+            
             <div class="row text-center">
-                <div class="col-sm-12 col-md-12 col-md-12">
+                <div class="col-md-8 col-md-offset-2 " style="border-radius: 25px;background-color:#DCDCDC;">
                     <h2>What We Offer</h2>
-                    <h2 style="font-size: 50px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Products and Services</h2>
+                    <h2 style="font-size: 30px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Products and Services</h2>
                     <p>We follow Competition-driven customerization approach</p>
                 </div>
             </div>
+
             <br>
             <div class="row">
-                <div class=" col-sm-12 col-md-12 col-md-12">
+                <div class=" col-sm-12 col-md-12 col-lg-12 col-xs-12">
                     <div class="services-list">
                         <div class="row">
-                            <div class="col-sm-4 col-md-4 col-md-4">
+                            <div class="col-sm-4 col-md-4 col-lg-4 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-product-hunt highlight"></div>
-                                    <div class="text-block">
+                                    <div class="text-block" >
                                         <div class="name"><h4 style="color:blue;">Our Products</h4></div>
                                         <div class="text">
                                             <p>Our Main products are:  </p>
@@ -169,7 +172,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4 col-md-4">
+                          
+
+                            <div class="col-sm-4 col-md-4 col-md-4" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-users highlight"></div>
                                     <div class="text-block">
@@ -180,7 +185,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4 col-md-4">
+                            <div class="col-sm-4 col-md-4 col-lg-4 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-cogs highlight"></div>
                                     <div class="text-block">
@@ -192,9 +197,9 @@
                                 </div>
                             </div>
 
-                        </div><br>
+                        </div></div></div></div><br>
                         <div class="row">    
-                            <div class="col-sm-4 col-md-4 col-md-4">
+                            <div class="col-md-4 col-sm-4 col-lg-4" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-pencil highlight"></div>
                                     <div class="text-block">
@@ -207,9 +212,9 @@
                             </div>
 
 
-                            <div class="col-sm-4 col-md-4 col-md-4">
+                            <div class="col-sm-4 col-md-4 col-lg-4" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-bolt highlight"></div>
+                                    <div class="ico fa fa-bolt highlight"></div> 
                                     <div class="text-block">
                                         <div class="name"><h4 style="color:blue;">Trending Designs</h4></div>
                                         <div class="text">
@@ -222,14 +227,25 @@
                                 </div>
                             </div>
 
+                        </div>
 
+
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </section>
                         </div>
 
 <!-- products and services section ends here-->
 <hr>
 
 <!-- About Us section starts here-->
-    <div class="container">
+    <div class="container" style="background-color:#F0F8FF;">
      <div><h3>About Us</h3></div><br>
      <div>
      <h4 style="color:blue;">Our background</h4>
@@ -268,5 +284,5 @@ Without our amazing community of buyers and sellers, this marketplace would not 
 
     </div>
 
-
+</div>
 <!-- About Us section ends here-->                            
