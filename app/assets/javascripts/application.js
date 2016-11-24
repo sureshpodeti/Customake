@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		$(".panel").fadeIn("slow");
+	});
+
+	$(".contact-box").hover(function(){
+		$(this).animate({
+          opacity: '1'
+        });
+	});
+
+	
+});
