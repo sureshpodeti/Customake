@@ -5,7 +5,7 @@
 <% if @orders.any?%>
     <% @orders.each do |order| %>
     <div class="container">
-      <div class="panel panel-default panel-primary">
+      <div class="panel panel-default panel-primary" style="box-shadow: 10px 10px grey;">
         <div class="panel-heading text-center"><b>Order Id</b> : <%=order.id%></div>
         <div class="panel-body">
         	<p><b>Ordered at</b> : <%= order.created_at %></p>
@@ -29,7 +29,7 @@
     <% end %>
 <% else %>
  <div class="container">
-  <div class="panel panel-default panel-primary">
+  <div class="panel panel-default panel-primary" style="box-shadow: 10px 10px grey;">
     <div class="panel-heading text-center">List of Orders</div>
     <div class="panel-body">
          <center><p>You have not placed any orders with us yet !</p></center>
