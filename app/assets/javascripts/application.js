@@ -18,7 +18,7 @@
 
 $(document).ready(function(){
 	$(window).scroll(function(){
-		$(".panel").fadeIn("slow");
+		$(".panel").fadeIn(3000);
 	});
 
 	$(".contact-box").hover(function(){
@@ -27,5 +27,4 @@ $(document).ready(function(){
         });
 	});
 
-	
 });
