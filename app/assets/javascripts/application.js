@@ -16,14 +16,21 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$(document).ready(function(){
-	$(window).scroll(function(){
+$(document).on('turbolinks:load', function(){
+	$(window).on("scroll",function(){
 		$(".panel").fadeIn(3000);
 	});
 
-	$(".contact-box").hover(function(){
+	$(".contact-box").mouseenter(function(){
 		$(this).animate({
           opacity: '1'
+        });
+	});
+
+
+	$(".contact-box").mouseleave(function(){
+		$(this).animate({
+          opacity: '0.5'
         });
 	});
 
