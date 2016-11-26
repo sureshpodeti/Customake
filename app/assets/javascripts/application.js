@@ -41,14 +41,18 @@ $(document).on('turbolinks:load', function(){
 
 	});*/
 	$(window).scroll(function(){
-		$(".home-bottom").slideDown(5000);
+		$(".home-bottom").slideDown(4000);
 	});
 
 
-	$(window).scroll(function(){
+	// $(window).scroll(function(){
 		$(".about-us").animate(
 			{opacity: '1'}, 3000
 		);
-	});
+	// });
 
 });
+
+
+
+

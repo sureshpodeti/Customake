@@ -39,11 +39,11 @@
         <div class="row text-center">
             <% i=1 %>
             <% @winners.each do |winner| %>
-                <div class="polaroid col-xs-12 col-md-3 col-sm-6  hero-feature">
+                <div class="polaroid col-xs-12 col-md-4 col-sm-6  hero-feature">
 
                             <% if winner.position==i %>
                                 <div class="thumbnaill">
-                                    <%= image_tag(winner.artifact, :size => '400x100', :crop => :fill )%>
+                                    <%= image_tag(winner.artifact, :size => '260x180', :crop => :fill )%>
                                     <div class="caption">
                                         <h5>
 
@@ -135,7 +135,8 @@
 
 
 <!-- our services and products-->
- <div class="container bootstrap snippet">
+<div id="services">
+ <div class="container bootstrap snippet" >
 <section id="services" class="current">
     <div class="services-top">
         <div class="container bootstrap snippet" >
@@ -239,13 +240,13 @@
                         </div>
 
                         </section>
-                        </div><br>
+                        </div></div><br>
 
 <!-- products and services section ends here-->
 <hr>
 <br>
 <!-- About Us section starts here-->
-    <div class="about-us container" style="background-color:#F0F8FF;opacity:0;box-shadow: 10px 10px grey;">
+    <div class="about-us container" style="background-color:#F0F8FF;opacity:0;box-shadow: 10px 10px grey;" id="about-us">
      <div class="text-center"><h3><b>About Us</h3></b></div><br>
      <div>
      <h4 style="color:blue;"><b>Our background</b></h4>
