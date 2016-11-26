@@ -19,6 +19,8 @@
 $(document).on('turbolinks:load', function(){
 	$(window).on("scroll",function(){
 		$(".panel").fadeIn(3000);
+
+
 	});
 
 	$(".contact-box").mouseenter(function(){
@@ -32,6 +34,21 @@ $(document).on('turbolinks:load', function(){
 		$(this).animate({
           opacity: '0.5'
         });
+	});
+
+
+/*	$(window).on("scroll", function(){
+
+	});*/
+	$(window).scroll(function(){
+		$(".thumbnail").slideDown(3000);
+	});
+
+
+	$(window).scroll(function(){
+		$(".about-us").animate(
+			{opacity: '1'}, 3000
+		);
 	});
 
 });

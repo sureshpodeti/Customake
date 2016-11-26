@@ -8,10 +8,10 @@
           <% break%>
         <% end %>
     <% end %>
-  <% end %>        
-      
-  
-    
+  <% end %>
+
+
+
   <!-- scrolling section ends here -->
 
 
@@ -40,30 +40,28 @@
             <% i=1 %>
             <% @winners.each do |winner| %>
                 <div class="polaroid col-xs-12 col-md-3 col-sm-6  hero-feature">
-                        
+
                             <% if winner.position==i %>
-                                <div class="thumbnail">
+                                <div class="thumbnaill">
                                     <%= image_tag(winner.artifact, :size => '400x100', :crop => :fill )%>
                                     <div class="caption">
-                                        <h5> 
-                                            
+                                        <h5>
+
                                                By <%= winner.winner_name%>
                                         </h5>
                                         <p><%= winner.college %></p>
                                     </div>
                                 </div>
-                                <% end %>                        
+                                <% end %>
                 </div>
 
                 <% if i>5 %>
                     <% break %>
-                <% end %>    
+                <% end %>
                     <% i=i+1 %>
-            <% end %>  
+            <% end %>
 
-        </div>    
-
-
+        </div>
 
 
 
@@ -71,10 +69,12 @@
 
 
 
-            
+
+
+
         <hr>
         <!-- second half goes here ..-->
-        
+
         <div class="container">
         <!-- Title -->
         <div class="row">
@@ -88,8 +88,8 @@
 
         <!-- Page Features -->
         <div class="row text-center">
-            <div class="col-md-3 col-sm-6 hero-feature" > 
-              <div class="offer panel panel-success"style="box-shadow: 10px 10px grey;display:none;">
+            <div class="col-md-3 col-sm-6 hero-feature" >
+              <div class="offer panel panel-success" style="box-shadow: 10px 10px grey;display:none;">
                     <div class="panel-heading">Group Offer</div>
                     <div class="panel-body">
                         <p><b>5%</b> DISCOUNT on bulk orders</p> <p>(5 no.s and more)</p>
@@ -112,7 +112,7 @@
                 <div class="offer panel panel-success"style="box-shadow: 10px 10px grey;display:none;">
                     <div class="panel-heading">Competitor Offers</div>
                     <div class="panel-body">
-                        <b>5%</b> DISCOUNT if you participate in atleast one competition and order through our portal 
+                        <b>5%</b> DISCOUNT if you participate in atleast one competition and order through our portal
                     </div>
                 </div>
 
@@ -125,21 +125,21 @@
                         <p>With <b>500</b> Coins you can order a </p><p>T-shirt for free on our website  </p>
                     </div>
                 </div>
-
+                <br>
             </div>
-        </div>    
+        </div>
 
             <!-- workflow section starts here-->
-            <hr>
-  
-  
- 
- <!-- our services and products-->
+            <hr><br>
+
+
+
+<!-- our services and products-->
  <div class="container bootstrap snippet">
 <section id="services" class="current">
     <div class="services-top">
         <div class="container bootstrap snippet" >
-            
+
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2 " style="border-radius: 25px;background-color:#DCDCDC;">
                     <h2>What We Offer</h2>
@@ -153,7 +153,7 @@
                 <div class=" col-sm-12 col-md-12 col-lg-12 col-xs-12">
                     <div class="services-list">
                         <div class="row">
-                            <div class="col-sm-4 col-md-4 col-lg-4 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
+                            <div class="col-md-3 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-product-hunt highlight"></div>
                                     <div class="text-block" >
@@ -172,9 +172,9 @@
                                     </div>
                                 </div>
                             </div>
-                          
 
-                            <div class="col-sm-4 col-md-4 col-md-4" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
+
+                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-users highlight"></div>
                                     <div class="text-block">
@@ -185,7 +185,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4 col-lg-4 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
+                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-cogs highlight"></div>
                                     <div class="text-block">
@@ -198,8 +198,8 @@
                             </div>
 
                         </div></div></div></div><br>
-                        <div class="row">    
-                            <div class="col-md-4 col-sm-4 col-lg-4" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
+                        <div class="row">
+                            <div class="col-md-3" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
                                     <div class="ico fa fa-pencil highlight"></div>
                                     <div class="text-block">
@@ -212,9 +212,9 @@
                             </div>
 
 
-                            <div class="col-sm-4 col-md-4 col-lg-4" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
+                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
                                 <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-bolt highlight"></div> 
+                                    <div class="ico fa fa-bolt highlight"></div>
                                     <div class="text-block">
                                         <div class="name"><h4 style="color:blue;">Trending Designs</h4></div>
                                         <div class="text">
@@ -239,50 +239,114 @@
                         </div>
 
                         </section>
-                        </div>
+                        </div><br>
 
 <!-- products and services section ends here-->
 <hr>
-
+<br>
 <!-- About Us section starts here-->
-    <div class="container" style="background-color:#F0F8FF;">
-     <div><h3>About Us</h3></div><br>
+    <div class="about-us container" style="background-color:#F0F8FF;opacity:0;box-shadow: 10px 10px grey;">
+     <div class="text-center"><h3><b>About Us</h3></b></div><br>
      <div>
-     <h4 style="color:blue;">Our background</h4>
-     Building websites for several years has given us an appreciation for the time and effort it takes to create beautiful work. We also understand the value of using themes & templates to kickstart the design & development process.
+     <h4 style="color:blue;"><b>Our background</b></h4>
+     A team with intellectual minds has put forth their ideas to create a bootstrap, an amazing market place. After a lot of observation of the peoples dissatisfaction over buying items of their personal choice. NthPointDesign came up with an idea of competition-driven customerized products. In this perspective the individual efforts of the team members came to the N<sup>th</sup> Point, and finally started to work upon the Idea of NthPointDesign.
 
-We love Bootstrap. It's easy to learn, customize, and great for rapid development of responsive websites. Whether you're a seasoned developer/designer or someone learning the basics of web design and development, Bootstrap is great way to get started with all of its out-of-the-box components.
-
-Bootstrap has come a long way and we wanted to create an amazing marketplace for Bootstrap enthusiasts like ourselves.
 
 
      </div>
 
      <div>
-         <h4 style="color:blue;">Our Mission</h4>
-         To be able to meet the need of individual personalization / customerization
+         <h4 style="color:blue;"><b>Our Mission</b></h4>
+         To be able to meet the need of individual personalization to satisfy the customers
 
      </div>
 
      <div>
-         <h4 style="color:blue;">Our Values</h4>
-         When we started this marketplace, we wanted to place a high level of importance on three core values we felt were essential. These core values shape how we operate our company and how we make all of our decisions.
+         <h4 style="color:blue;"><b>Our Values</b></h4>
+         NthPointDesign is the first market place which encourage designers and statisfy customers by giving priority to following values. The following values depict the total quality management.
 
-<h5 >Superior Quality</h5>
+<h4><b><i>Encourage Ideas</i></b></h4>
 
-All of our themes go through an extensive review process. Not only do we require a minimum design standard, but we also dig through the code of each theme to ensure that no errors are present. Rest assured that every theme listed on our marketplace is properly vetted by our team and worthy of being used in your next project.
+ <p style="color:green;"><q> <i><b>If you're good at something, never do it for free -- by THE JOKER.</b></i> </q></p>
+ <p> NthPointDesgin becomes a platform to encourage individual ideas on design. We will share  profit on a particular design with the designer which is a unique opportunity for the designer.</p>
 
-<h5>Outstanding Support</h5>
 
-We place a great deal of importance on offering outstanding customer support to ensure our marketplace runs smoothly.
 
-<h5>A Focus on Community</h5>
+<h4><b><i>Quality</i></b></h4>
 
-Without our amazing community of buyers and sellers, this marketplace would not exist. Every feature we build and every decision we make is with the goal of improving our community and offering additional value to our members.
+We give assurance for maintaing quality in the service and products to fulfil the basic customer's requirement.
+
+    <br><br>
 
      </div>
 
     </div>
 
 </div>
-<!-- About Us section ends here-->                            
+<!-- About Us section ends here-->
+
+<br>
+<hr>
+
+<!-- new about us page starts here -->
+<div class="container who-we">
+
+<div class="wel-info text-center">
+
+<h2>How to proceed?</h2>
+
+
+</div>
+</div>
+
+<div class="container-fluid cards-row">
+<div class="container">
+<div class="row">
+
+  <div class="col-sm-6 col-md-3 col-md-offset-1 ">
+    <div class="home-bottom thumbnail"  style="display:none;">
+      <%= image_tag("order.png", :size => '260x180')%>
+<!--        <img class="team-pic" src="images/place.png">
+ -->      <div class="caption">
+        <h3>Customer</h3>
+        <p class="card-description">Customer can order through <b>order</b> section. If you have design you can simply submit your design and order, and if you invite designs from us. We will provide you with the best designs obtained from compitions.</p><br>
+        <!-- <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-6 col-md-3 ">
+    <div class="home-bottom thumbnail"  style="display:none;">
+      <%= image_tag("man.png", :size => '260x180')%>
+<!--         <img class="team-pic" src="images/place.png">
+ -->      <div class="caption">
+        <h3>Manufacturer</h3>
+        <p class="card-description">There is a lot of opportunity for customerized products in the market. We will assure you with the best business relationship with us.
+        </p>
+        <p>
+            You can register your business with us by registering on <b>manufacturer</b>
+        </p>
+
+        <!-- <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-6 col-md-3 ">
+    <div class="home-bottom thumbnail" style="display:none;">
+       <%= image_tag("competition-icon-4.png", :size => '260x180')%>
+<!--        <img class="team-pic" src="images/place.png">
+ -->      <div class="caption">
+        <h3>Competitor</h3>
+        <p class="card-description">Competitions are launched frequently in a month, and each participant is awarded with 10 coins for each successful submission. First 3 top designs awarded with extra coins, person getting 500 coins can order a t-shirt with us for free.</p>
+<!--         <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<!-- about us ends here -->

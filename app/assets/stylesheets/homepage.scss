@@ -16,3 +16,26 @@ div.caption {
 }
 
 
+
+//new about us
+// who we
+.who-we{margin-top:50px; margin-bottom:50px;background-color: #F8F8F8}
+.who-we h2{color:#d9534f;}
+// cards
+.cards-row{padding-top:70px; padding-bottom:50px; background:#eee}
+.home-bottom{padding:0; border-radius:0; border:none; box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}
+.home-bottom>img{width:100%; display:block}
+.home-bottom h3{font-size:26px; color:#336}
+.home-bottom h3{margin:0; padding:8px 0; border-bottom:solid 2px #aeb6bf; text-align:center}
+.home-bottom p{padding-top:8px; font-size:13px}
+.home-bottom .btn{border-radius:0; box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12); font-size:20px}
+.team-pic{height:150px !important; width:150px !important; border-radius:50%; margin-top:-75px; box-shadow:0 2px 5px 0 rgba(0,0,0,.4),0 2px 10px 0 rgba(0,0,0,.5); transition:all .2s ease-out}
+.home-bottom:hover .team-pic{height:200px !important; width:200px !important; margin-top:-100px}
+.home-bottom p.social{padding-top:15px; text-align:center}
+.social a{color:#FFF; font-size:18px !important}
+.social i.fa{height:36px; width:36px; text-align:center; line-height:36px; background:#069; border-radius:50%}
+.social i.fa.fa-facebook{background:#43609C}
+.social i.fa.fa-twitter{background:#2CA8D2}
+.social i.fa.fa-linkedin{background:#428099}
+.social i.fa.fa-google-plus{background:#ce4d39}
+.home-bottom {box-shadow: 10px 10px 5px grey;}
