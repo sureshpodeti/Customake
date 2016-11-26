@@ -41,7 +41,7 @@ $(document).on('turbolinks:load', function(){
 
 	});*/
 	$(window).scroll(function(){
-		$(".thumbnail").slideDown(3000);
+		$(".home-bottom").slideDown(5000);
 	});
 
 
