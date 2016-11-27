@@ -12,7 +12,7 @@
 
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;">
+  <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;background-color:#B3ADC1;">
   <br>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -116,7 +116,10 @@
 
         <div class="footer-icons">
 
-          <a href="#"><i class="fa fa-facebook"></i></a>
+          <!-- <a href="#"><i class="fa fa-facebook"></i></a> -->
+          <%= link_to "https://www.facebook.com/nthpointdesign/", :target => "_blank"  do %>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <% end%>
           <a href="#"><i class="fa fa-linkedin"></i></a>
 
         </div>
