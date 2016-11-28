@@ -51,6 +51,10 @@ $(document).on('turbolinks:load', function(){
 		);
 	// });
 
+	$(window).scroll(function(){
+		$(".jumbo").slideDown(4000);
+	});
+
 });
 
 
