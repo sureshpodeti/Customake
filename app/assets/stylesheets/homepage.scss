@@ -39,3 +39,13 @@ div.caption {
 .social i.fa.fa-linkedin{background:#428099}
 .social i.fa.fa-google-plus{background:#ce4d39}
 .home-bottom {box-shadow: 10px 10px 5px grey;}
+
+
+
+
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }

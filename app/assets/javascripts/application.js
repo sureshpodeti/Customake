@@ -55,7 +55,11 @@ $(document).on('turbolinks:load', function(){
 		$(".jumbo").slideDown(4000);
 	});
 
+
+
+
 });
+
 
 
 
