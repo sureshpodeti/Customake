@@ -12,8 +12,8 @@
 	    	<% if task.current_task == true %>
 	    		<% status=true%>
 	    		<p><%= task.description %></p>
-	    		 <br>
-	    		 <p><%= image_tag(task.artifact)%></p>
+	    		<!--  <br>
+	    		 <p><%= image_tag(task.artifact)%></p> -->
 	    		<br>
 	    		<p><%= link_to "Submit your design", competition_task_competition_submissions_path(task)%></p>
 	    	<% end %>
