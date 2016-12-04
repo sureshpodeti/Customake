@@ -2,14 +2,15 @@ class CustomerOrdersController < ApplicationController
 	before_action :authenticate_customer!
 	before_action :get_data, only: [:show, :destroy, :update, :edit]
 
+
 	def index
 		@orders=current_customer.customer_orders.all.order('created_at DESC')
 	end
-	
+
 	def new
-		@order=current_customer.customer_orders.build	
+		@order=current_customer.customer_orders.build
 	end
-	
+
 	def create
 		@order=current_customer.customer_orders.build(order_params)
 		if @order.save
@@ -20,11 +21,11 @@ class CustomerOrdersController < ApplicationController
 			redirect_to new_customer_order_path
 		end
 	end
-	
+
 	def edit
 		@order=CustomerOrder.find(params[:id])
 	end
-	
+
 	def destroy
 		@order=CustomerOrder.find(params[:id])
 		if @order.destroy
@@ -32,8 +33,8 @@ class CustomerOrdersController < ApplicationController
 			redirect_to customer_orders_path
 		else
 			flash[:danger] = "Error in cancelling your order !"
-		end		
-	end	
+		end
+	end
 
 	def update
 		@order=CustomerOrder.find(params[:id])
@@ -44,13 +45,13 @@ class CustomerOrdersController < ApplicationController
     		flash[:error] = "Description, Quantity, and expected delivery date fileds are mandatory"
       		render 'edit'
     	end
-	end	
+	end
 	private
 	def order_params
 		params.require(:customer_order).permit(:customer_id, :artifact, :quotation, :description, :quantity, :expected_delivery_date, :status)
-	end	
+	end
 
 	def get_data
 		@order=current_customer.customer_orders.find(params[:id])
-	end			
+	end
 end

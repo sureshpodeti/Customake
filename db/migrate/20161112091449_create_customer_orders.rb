@@ -7,7 +7,7 @@ class CreateCustomerOrders < ActiveRecord::Migration[5.0]
       t.integer :quantity
       t.date :expected_delivery_date
       t.string :status
-
+      t.string   "bucket"
       t.timestamps
     end
   end

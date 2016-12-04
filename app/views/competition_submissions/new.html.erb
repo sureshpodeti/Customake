@@ -1,10 +1,10 @@
 
-	 
+
 <div class="container">
   <div class="panel panel-primary" style="box-shadow: 10px 10px grey;">
     <div class="panel-heading text-center">Submissions Section</div>
     <div class="panel-body">
-    	
+
     <%= form_for CompetitionSubmission.new, url: competition_task_competition_submissions_path(@task), html: { multipart: true } do |form| %>
 	  <%= form.file_field :artifact %> <br>
 	  <%= form.button :submit %>
@@ -19,5 +19,4 @@
 
 
 
-		
-		
+
