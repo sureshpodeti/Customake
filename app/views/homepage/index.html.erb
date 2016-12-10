@@ -44,11 +44,11 @@
       <!-- modifications here -->
            <!-- Page Content -->
     <div class="container">
-
+        <!-- first row starts here-->
         <div class="row">
 
+            <!-- column starting-1-->
             <div class="col-md-3">
-                <div class="row">
                 <p class="lead">Shop By Category</p>
                 <div class="list-group">
                     <a href="#" class="list-group-item">T-Shirt(Boys)</a>
@@ -56,18 +56,10 @@
                     <a href="#" class="list-group-item">Sweatshirts(Boys)</a>
                     <a href="#" class="list-group-item">Sweatshirts(Girls)</a>
                 </div>
-                </div>
-                    <br><br><br><br><br><br><br><br>
-                <div class="row pull-left">
-                    <div class="hit-the-floor">
-                        <ul>
-                            <li>5% DISCOUNT on bulk orders (5 No.s and more)</li><br>
-                            <li>5% DISCOUNT if you participate in atleast one competition </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
+            <!-- column ending-1-->
 
+            <!-- column starting-2-->
             <div class="col-md-9">
 
                 <div class="row carousel-holder">
@@ -104,14 +96,35 @@
                     </div>
 
                 </div>
+                </div>
+                <!-- column ending-2-->
+                </div>
+                <!-- first row ends here-->
 
+
+
+                <!-- second row starts here-->
                 <div class="row">
+                    <!-- second row column-1 starts -->
+                    <div class="col-md-3">
+                         <div class="hit-the-floor">
+                        <ul>
+                            <li>5% DISCOUNT on bulk orders (5 No.s and more)</li><br>
+                            <li>5% DISCOUNT if you participate in atleast one competition </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <!-- second row column-1 ending-->
+
+
+
+                    <!-- second row column-2 starting-->
+                    <div class="col-md-9">
                     <% (0..20).each do |i|%>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <%= image_tag("samp.png", :size => "320x360") %>
                             <div class="caption">
-
                                 <h6><%= link_to "Christmas Sweatshirts" %>
                                 </h6>
                                 <p>₹900/- |
@@ -122,34 +135,13 @@
                       </div>
                      <% end %>
                 </div>
-
-
-                <hr>
-                <div class="row">
-                    <% (0..20).each do |i|%>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <%= image_tag("samp.png", :size => "320x360") %>
-                            <div class="caption">
-                                <h4 class="pull-right">Rs.900/- </h4>
-                                <h5><a href="#">Christmas Sweatshirts</a>
-                                </h5>
-                            </div>
-                        </div>
-                      </div>
-                     <% end %>
+                <!-- second row column-2 ending-->
                 </div>
-
-
-
-
-
-
-
+                <!-- row-2 ends here-->
 
         </div>
+        <!-- container ends here-->
 
-    </div>
     <!-- /.container -->
 
 
