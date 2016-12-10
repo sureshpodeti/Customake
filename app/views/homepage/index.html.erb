@@ -16,78 +16,6 @@
 
 
 
-    <!-- Page Content -->
-    <div class="container-fluid">
-
-
-    <!-- carousel starts here (size should 800x300)-->
-   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-
-      <div class="item active">
-
-<!--         <img src="CONTACT-US.png" alt="Chania" width="460" height="345">
- -->
- <%= image_tag("carousel_1.jpg", :size => "300x230")%>
- <!-- <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div> -->
-      </div>
-
-      <div class="item">
-<!--         <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
- -->
-    <%= image_tag("products_info.jpg", :size => "460x345")%>
-
-     <!--  <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div> -->
-      </div>
-
-      <div class="item">
-<!--         <img src="img_flower.jpg" alt="Flower" width="460" height="345">
- -->
-    <%= image_tag("trending_info.jpg", :size => "460x345")%>
- <!-- <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
-        </div> -->
-      </div>
-
-      <div class="item">
-<!--         <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
- -->
- <%= image_tag("competitions_info.jpg", :size => "460x345")%>
-        <!-- <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
-        </div> -->
-      </div>
-
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
     <!-- carousel ends here-->
 
 
@@ -103,6 +31,130 @@
     </div>
 
    -->
+
+
+
+
+
+
+
+
+
+
+      <!-- modifications here -->
+           <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Shop By Category</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">T-Shirt(Boys)</a>
+                    <a href="#" class="list-group-item">T-Shirt(Girls)</a>
+                    <a href="#" class="list-group-item">Sweatshirts(Boys)</a>
+                    <a href="#" class="list-group-item">Sweatshirts(Girls)</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <%= image_tag("carousel_1.jpg", :size => "300x230")%>
+                                </div>
+                                <div class="item">
+                                    <%= image_tag("products_info.jpg", :size => "460x345")%>
+                                </div>
+                                <div class="item">
+                                    <%= image_tag("trending_info.jpg", :size => "460x345")%>
+                                </div>
+                                <div class="item">
+                                    <%= image_tag("competitions_info.jpg", :size => "460x345")%>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <% (0..20).each do |i|%>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <%= image_tag("samp.png", :size => "320x360") %>
+                            <div class="caption">
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a href="#">First Product</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                            </div>
+                        </div>
+                      </div>
+                     <% end %>
+                </div>
+
+
+                <hr>
+                <div class="row">
+                    <% (0..20).each do |i|%>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <%= image_tag("samp.png", :size => "320x360") %>
+                            <div class="caption">
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a href="#">First Product</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                            </div>
+                        </div>
+                      </div>
+                     <% end %>
+                </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+
+      <!-- modifications end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -251,225 +303,7 @@
 
 
 
-        <!-- workflow section starts here-->
-        <hr><br>
 
-<!-- our services and products-->
-<div id="services" style="background-color:white;">
- <div class="container bootstrap snippet" ><br>
-<section id="services" class="current">
-    <div class="services-top">
-        <div class="container bootstrap snippet" >
-
-            <div class="row text-center">
-                <div class="col-md-8 col-md-offset-2 " style="border-radius: 25px;background-color:#DCDCDC;box-shadow: 10px 10px grey;">
-                    <h2>What We Offer</h2>
-                    <h2 style="font-size: 30px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Products and Services</h2>
-                    <p>We follow Competition-driven customerization approach</p>
-                </div>
-            </div>
-
-            <br><br>
-            <div class="row">
-                <div class=" col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                    <div class="services-list">
-                        <div class="row">
-                            <div class="col-md-3 " style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
-                                <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-product-hunt highlight"></div>
-                                    <div class="text-block" >
-                                        <div class="name"><h4 style="color:blue;">Our Products</h4></div>
-                                        <div class="text">
-                                            <p>Our Main products are:  </p>
-                                        <p>
-                                            <ul>
-                                                <li>T-shirts (Both Round neck and Collar) </li>
-                                                <li>Sweatshirts</li>
-                                                <li>Poster / Logo Design</li>
-                                            </ul>
-                                        </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
-                                <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-users highlight"></div>
-                                    <div class="text-block">
-                                        <div class="name"><h4 style="color:blue;">Bulk Order</h4></div>
-                                        <div class="text">
-                                        <p>We accept bulk orders in general. Minimum quantity to place an order without delivery charges is 5. You can place an order by logging into the Order section, You can upload already existing design or ask us to provide a design by giving your requirement description. We may launch a competition based on your requirement to get best of the best designs for you. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
-                                <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-cogs highlight"></div>
-                                    <div class="text-block">
-                                        <div class="name"><h4 style="color:blue;">Manufacturing With Us</h4></div>
-                                        <div class="info">
-                                            <p>You can collaborate your manufacturing business by registering with us at manufacture section. Since our business is competition-driven customerization you will have great business deal with us</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div></div></div></div><br>
-                        <div class="row">
-                            <div class="col-md-3" style="border-radius: 25px;background-color:lavenderblush;box-shadow: 10px 10px grey;">
-                                <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-pencil highlight"></div>
-                                    <div class="text-block">
-                                        <div class="name"><h4 style="color:blue;">Competitions</h4></div>
-                                        <div class="text">
-                                        <p>We launch competitions frequently in each month. If you are creative you can get attractive rewards by participating in competitions. We offer 10 coins for each successful submission for a particular task and additional coins for top 3 designs.</p> <p>we are excited to inform you that If you score 500 points you can order a product from our website. 5% Discount if you buy any product from our website  </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-3 col-md-offset-1" style="border-radius: 25px;background-color:lavender;box-shadow: 10px 10px grey;">
-                                <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-bolt highlight"></div>
-                                    <div class="text-block">
-                                        <div class="name"><h4 style="color:blue;">Trending Designs</h4></div>
-                                        <div class="text">
-                                        <p>We launch competitions on trending topics to get best models which suite current requirement of many. If you got bored of t-shirt designs this is the place you should look for. </p>
-                                        <p>
-                                            If you want designs on a particular topic just log into the portal and place an order / share your thought we will help you out to get the exact design
-                                        </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <br>
-
-
-                        </div>
-                        </div>
-
-                        </section>
-                        </div></div><br>
-
-<!-- products and services section ends here-->
-<hr>
-<br>
-<!-- About Us section starts here-->
-    <div class="about-us container" style="background-color:#F0F8FF;opacity:0;box-shadow: 10px 10px grey;" id="about-us">
-<!--      <div class="text-center"><h3><b>About Us</h3></b></div><br>
- -->
-    <div class="text-center"> <%= image_tag("about-us_burned.png")%></div>
-  <div>
-     <h4 style="color:blue;"><b>Our background</b></h4>
-     A team with intellectual minds has put forth their ideas to create a bootstrap, an amazing market place. After a lot of observation of the peoples dissatisfaction over buying items of their personal choice. NthPointDesign came up with an idea of competition-driven customized products. In this perspective the individual efforts of the team members came to the N<sup>th</sup> Point, and finally started to work upon the Idea of NthPointDesign.
-
-
-
-     </div>
-
-     <div>
-         <h4 style="color:blue;"><b>Our Mission</b></h4>
-         To be able to meet the need of individual personalization to satisfy the customers
-
-     </div>
-
-     <div>
-         <h4 style="color:blue;"><b>Our Values</b></h4>
-         NthPointDesign is the first market place which encourage designers and statisfy customers by giving priority to following values. The following values depict the total quality management.
-
-<h4><b><i>Encourage Ideas</i></b></h4>
-
- <p style="color:green;"><q> <i><b>If you're good at something, never do it for free -- by THE JOKER.</b></i> </q></p>
- <p> NthPointDesgin becomes a platform to encourage individual ideas on design. We will share  profit on a particular design with the designer which is a unique opportunity for the designer.</p>
-
-
-
-<h4><b><i>Quality</i></b></h4>
-
-We give assurance for maintaing quality in the service and products to fulfil the basic customer's requirement.
-
-    <br><br>
-
-     </div>
-
-    </div>
-
-</div>
-<!-- About Us section ends here-->
-
-<br>
-<hr>
-
-<!-- new about us page starts here -->
-<div class="container who-we">
-
-<div class="wel-info text-center">
-
-<h2>How to proceed?</h2>
 
 
 </div>
-</div>
-
-<div class="container-fluid cards-row">
-<div class="container">
-<div class="row">
-
-  <div class="col-sm-6 col-md-3 col-md-offset-1 ">
-    <div class="home-bottom thumbnail"  style="display:none;">
-      <%= image_tag("order.png", :size => '260x180')%>
-<!--        <img class="team-pic" src="images/place.png">
- -->      <div class="caption">
-        <h3>Customer</h3>
-        <p class="card-description">Customer can order through <b>order</b> section. If you have design you can simply submit your design and order, and if you invite designs from us. We will provide you with the best designs obtained from competitions</p><br>
-        <!-- <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
-      </div>
-    </div>
-  </div>
-
-    <div class="col-sm-6 col-md-3 ">
-    <div class="home-bottom thumbnail"  style="display:none;">
-      <%= image_tag("man.png", :size => '260x180')%>
-<!--         <img class="team-pic" src="images/place.png">
- -->      <div class="caption">
-        <h3>Manufacturer</h3>
-        <p class="card-description">There is a lot of opportunity for customized products in the market. We will assure you with the best business relationship with us.
-        </p>
-        <p>
-            You can register your business with us by registering on <b>manufacturer</b>
-        </p>
-
-        <!-- <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
-      </div>
-    </div>
-  </div>
-
-    <div class="col-sm-6 col-md-3 ">
-    <div class="home-bottom thumbnail" style="display:none;">
-       <%= image_tag("competition-icon-4.png", :size => '260x180')%>
-<!--        <img class="team-pic" src="images/place.png">
- -->      <div class="caption">
-        <h3>Competitor</h3>
-        <p class="card-description">Competitions are launched frequently in a month, and each participant is awarded with 10 coins for each successful submission. First 3 top designs awarded with extra coins, person getting 500 coins can order a t-shirt with us for free.</p>
-<!--         <p class="social"><a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-google-plus"></i></a></p> -->
-      </div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-</div>
-
-<!-- about us ends here -->
