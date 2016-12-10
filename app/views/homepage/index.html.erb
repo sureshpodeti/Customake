@@ -48,12 +48,23 @@
         <div class="row">
 
             <div class="col-md-3">
+                <div class="row">
                 <p class="lead">Shop By Category</p>
                 <div class="list-group">
                     <a href="#" class="list-group-item">T-Shirt(Boys)</a>
                     <a href="#" class="list-group-item">T-Shirt(Girls)</a>
                     <a href="#" class="list-group-item">Sweatshirts(Boys)</a>
                     <a href="#" class="list-group-item">Sweatshirts(Girls)</a>
+                </div>
+                </div>
+                    <br><br><br><br><br><br><br><br>
+                <div class="row pull-left">
+                    <div class="hit-the-floor">
+                        <ul>
+                            <li>5% DISCOUNT on bulk orders (5 No.s and more)</li><br>
+                            <li>5% DISCOUNT if you participate in atleast one competition </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -100,9 +111,12 @@
                         <div class="thumbnail">
                             <%= image_tag("samp.png", :size => "320x360") %>
                             <div class="caption">
-                                <h4 class="pull-right">Rs.900/-</h4>
-                                <h5><a href="#">Christmas Sweatshirts</a>
-                                </h4>
+
+                                <h6><%= link_to "Christmas Sweatshirts" %>
+                                </h6>
+                                <p>₹900/- |
+                                <%= link_to "ORDER", customer_profiles_path %>
+                                </p>
                             </div>
                         </div>
                       </div>
@@ -194,114 +208,5 @@
             <% end %>
         <% end %>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <hr>
-
-            <!--  sample test goes here-->
-             <div class="container" >
-        <!-- Title -->
-        <div class="row" >
-            <div class="col-lg-12">
-                <h3><b>Best Offers</b></h3>
-            </div>
-        </div>
-        </div><br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                        <div class="offer panel panel-success" style="box-shadow:10px 10px grey;display:none;">
-                    <div class="panel-heading"><b>Group Offer</b></div>
-                    <div class="panel-body">
-                        <p><b>5%</b> DISCOUNT on bulk orders</p> <p>(5 no.s and more)</p>
-                    </div>
-                </div>
-
-                </div>
-
-                <div class="col-md-5 col-md-offset-1">
-                         <div class="offer panel panel-success"style="box-shadow: 10px 10px grey;display:none;">
-                    <div class="panel-heading"><b>Competition Offers</b></div>
-                    <div class="panel-body">
-                        <b>10</b> coins awarded for each succussful submission for each particular task
-                    </div>
-                </div>
-
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-5">
-                        <div class="offer panel panel-success"style="box-shadow: 10px 10px grey;display:none;">
-                    <div class="panel-heading"><b>Competitor Offers</b></div>
-                    <div class="panel-body">
-                        <b>5%</b> DISCOUNT if you participate in atleast one competition and order through our portal
-                    </div>
-                </div>
-
-                </div>
-
-                <div class="col-md-5 col-md-offset-1">
-                        <div class="offer panel panel-success"style="box-shadow: 10px 10px grey;display:none;">
-                    <div class="panel-heading"><b>Reward Coins</b></div>
-                    <div class="panel-body">
-                        <p>With <b>500</b> Coins you can order a </p><p>T-shirt for free on our website  </p>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-
-
-
-        </div>
-          <!-- sample test ends here-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
