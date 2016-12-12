@@ -1,3 +1,30 @@
+ <!-- Modal stars here-->
+  <div class="modal fade" id="my-modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Register / Login Roles</h4>
+        </div>
+        <div class="modal-body text-center">
+          <p>As :
+          hgsgs
+          </p>
+
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ <!-- Modal ends here-->
+
+
+
     <!-- section for scrolling messages-->
   <% if @messages.any? %>
     <% @messages.each do |msg|%>
@@ -120,10 +147,11 @@
 
                     <!-- second row column-2 starting-->
                     <div class="col-md-9">
-                    <% (0..20).each do |i|%>
+                    <% (0..11).each do |i|%>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <%= image_tag("samp.png", :size => "320x360") %>
+                            <% image = "samp"+i.to_s+".png"%>
+                            <%= image_tag(image, :size => "320x360") %>
                             <div class="caption">
                                 <h6><%= link_to "Christmas Sweatshirts" %>
                                 </h6>
