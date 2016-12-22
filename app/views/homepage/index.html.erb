@@ -9,8 +9,8 @@
           <h4 class="modal-title">Register / Login Roles</h4>
         </div>
         <div class="modal-body text-center">
-          <p>As :
-          hgsgs
+          <p>
+                <%= options_for_select([['Lisbon', 1], ['Madrid', 2]]) %>
           </p>
 
        </div>
@@ -153,6 +153,7 @@
                             <% image = "samp"+i.to_s+".png"%>
                             <%= image_tag(image, :size => "320x360") %>
                             <div class="caption">
+                                <p><%= link_to "Front" %> | <%= link_to "Back" %></p>
                                 <h6><%= link_to "Christmas Sweatshirts" %>
                                 </h6>
                                 <p>₹900/- |
