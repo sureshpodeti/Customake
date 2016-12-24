@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118191116) do
+ActiveRecord::Schema.define(version: 20161224041108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "actor_roles", force: :cascade do |t|
+    t.integer  "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "competition_submissions", force: :cascade do |t|
     t.integer  "competitor_id"
@@ -131,6 +137,12 @@ ActiveRecord::Schema.define(version: 20161118191116) do
     t.text     "address"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "login_profiles", force: :cascade do |t|
+    t.string   "profile"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "manufacturer_orders", force: :cascade do |t|

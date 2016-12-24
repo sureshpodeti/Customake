@@ -1,0 +1,44 @@
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form_hover " style="background-color: #cccccc;">
+                <p style="text-align: center; margin-top: 20px;">
+                    <i class="fa fa-gears" style="font-size:187px;"></i>
+                </p>
+                <div class="header">
+                    <div class="blur"></div>
+                    <div class="header-text">
+                        <div class="panel panel-primary" style="height:320px;">
+                            <div class="panel-heading">
+                                <h3 style="background-color:#428BCA; color:white;">
+                                    <i class="fa fa-arrows-v"></i>    Choose Login / Register role    <i class="fa fa-arrows-v"></i></h3>
+                            </div>
+                           <!--  <div class="panel-body">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Email">
+                                </div>
+                            </div> -->
+
+                            <div class="profiles">
+                             <%= simple_form_for @profile do  |f|%>
+  <%= f.input :profile, collection: ["Customer", "Manufacturer", "Competitor"], as: :radio_buttons, label: "" %>
+ <%= f.submit "Go" %>
+<% end %>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

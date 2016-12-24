@@ -1,0 +1,2 @@
+class LoginProfile < ApplicationRecord
+end

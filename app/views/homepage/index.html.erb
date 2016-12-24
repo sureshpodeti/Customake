@@ -10,7 +10,8 @@
         </div>
         <div class="modal-body text-center">
           <p>
-                <%= options_for_select([['Lisbon', 1], ['Madrid', 2]]) %>
+             <%= select_tag(:role_id, options_for_select([['Customer', 1], ['Manufacturer', 2], ['Participant', 3]])) %>
+
           </p>
 
        </div>
@@ -179,55 +180,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Page Features -->
-        <div class="row text-center">
-        <% if @winners.any?%>
-         <hr>
-            <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Best Designs</h3>
-            </div>
-        </div>
-        <!-- /.row -->
-            <% i=1 %>
-            <% @winners.each do |winner| %>
-                <div class="polaroid col-md-4  hero-feature">
-
-                            <% if winner.position==i %>
-                                <div class="thumbnaill">
-                                    <%= image_tag(winner.artifact, :size => '260x180', :crop => :fill )%>
-                                    <div class="caption">
-                                        <h5>
-
-                                               By <%= winner.winner_name%>
-                                        </h5>
-                                        <p><%= winner.college %></p>
-                                    </div>
-                                </div>
-                                <% end %>
-                </div>
-
-                <% if i>5 %>
-                    <% break %>
-                <% end %>
-                    <% i=i+1 %>
-            <% end %>
-        <% end %>
-        </div>
 
 </div>
