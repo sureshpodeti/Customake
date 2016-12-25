@@ -1,10 +1,45 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#flip1, #flip2, #flip3, #flip4, #flip5 {
+
+#flip1{
+
     padding: 5px;
     text-align: center;
-    background-color: #e5eecc;
+    background-color: #BCDDE5;
+    border: solid 1px #c3c3c3;
+}
+
+#flip2{
+
+    padding: 5px;
+    text-align: center;
+    background-color: #E5BCC5;
+    border: solid 1px #c3c3c3;
+}
+
+#flip3{
+
+    padding: 5px;
+    text-align: center;
+    background-color: #BCE5CB;
+    border: solid 1px #c3c3c3;
+}
+
+
+#flip4{
+
+    padding: 5px;
+    text-align: center;
+    background-color: #D8DCA6;
+    border: solid 1px #c3c3c3;
+}
+
+#flip5{
+
+    padding: 5px;
+    text-align: center;
+    background-color: #E5AD9A;
     border: solid 1px #c3c3c3;
 }
 
