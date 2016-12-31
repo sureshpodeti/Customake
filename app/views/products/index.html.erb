@@ -21,13 +21,68 @@
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body" style="background-color:white">
         <h2>Our main products are:  </h2>
-          <p>
-           <ul>
-            <li><p style="color:red;"><b>T-SHIRTS (Both Round neck and Collar) </b></p></li>
-            <li><p style="color:blue;"><b>SWEATSHIRTS</b></p></li>
-            <li><p style="color:red;"><b>POSTER / LOGO DESIGN</b></p></li>
-           </ul>
-          </p>
+              <div class="row">
+                <div class="col-md-2">
+                    <%= image_tag("collar.png", :size => "120x150")%>
+                </div>
+                <div class="col-md-2">
+                  <%= image_tag("roundneck.png", :size => "120x150")%>
+                </div>
+                <div class="col-md-2">
+                  <%= image_tag("girl roundneck.png", :size => "120x150")%>
+                </div>
+                <div class="col-md-2">
+                  <%= image_tag("girls collar.png", :size => "120x150")%>
+                </div>
+                <div class="col-md-2">
+                  <%= image_tag("zip sweater boys.png", :size => "120x150")%>
+                </div>
+                <div class="col-md-2">
+                  <%= image_tag("sweater.png", :size => "120x150")%>
+                </div>
+              </div>
+              <br><br>
+                <!-- size chart -->
+                <div class="container info">
+  <h2>T-Shirts size guide</h2>
+  <p> Applicable for both boys and girls</p>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Size</th>
+        <th>Length (inches)</th>
+        <th>Length (cms)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S</td>
+        <td>28'</td>
+        <td>71</td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td>29'</td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>30'</td>
+        <td>76</td>
+      </tr>
+      <tr>
+        <td>XL</td>
+        <td>31'</td>
+        <td>79</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+                <!-- size chart ends here -->
+
+
 </div>
       </div>
     </div>
@@ -39,10 +94,10 @@
         </h4>
       </div>
       <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body" style="background-color:#84B5BC">We accept bulk orders in general. Minimum quantity to place an order without delivery charges is 5. You can place an order by logging into the Order section, You can upload already existing design or ask us to provide a design by giving your requirement description. We may launch a competition based on your requirement to get best of the best designs for you.</div>
+        <div class="panel-body" ><p>We accept bulk orders in general. <i><b>Minimum quantity to place an order in T-shirts category (both collar and round neck) is 6 (SIX) and in Sweatshirts 3 (THREE)</b></i>.</p> <p>You can place an order by logging into the <%= link_to "Order section", customer_profiles_path%>, You can pick a design which suite you best or upload already existing design or ask us to provide a design by giving your requirement description.</p></div>
       </div>
     </div>
-    <br>
+    <!-- <br>
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -54,18 +109,17 @@
 
 we are excited to inform you that If you score 500 points you can order a product from our website. 5% Discount if you buy any product from our website</div>
       </div>
-    </div>
+    </div> -->
     <br>
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse"  data-parent="#accordion" href="#collapse4"><strong>Trending Designs</strong></a>
+          <a data-toggle="collapse"  data-parent="#accordion" href="#collapse4"><strong>Trending Designs / Complete personalization</strong></a>
         </h4>
       </div>
       <div id="collapse4" class="panel-collapse collapse">
-        <div class="panel-body" style="background-color:#A4D1A2">We launch competitions on trending topics to get best models which suite current requirement of many. If you got bored of t-shirt designs this is the place you should look for.
-
-If you want designs on a particular topic just log into the portal and place an order / share your thought we will help you out to get the exact design</div>
+        <div class="panel-body"><p>We personalize the t-shirt designs for each college, After looking these designs all you will say is <q><i><b>This is what we where look for</b></i></q></p>
+     <p>Please help us to make more personalization in your college t-shirt designs by participating in <%= link_to "College Ambassador program "%></p></div>
       </div>
     </div>
     <br>
@@ -76,9 +130,14 @@ If you want designs on a particular topic just log into the portal and place an 
         </h4>
       </div>
       <div id="collapse5" class="panel-collapse collapse" href="collapse5">
-        <div class="panel-body" style="background-color:#D1CDA2">You can collaborate your manufacturing business by registering with us at manufacture section. Since our business is competition-driven customerization you will have great business deal with us</div>
+        <div class="panel-body" ><p>You can collaborate your manufacturing business by registering with us at <%= link_to "manufacturer section", manufacturer_profiles_path %>. Since our business is competition-driven customerization you will have great business deal with us</p>
+        <p>
+          We have our manufacturer based on Kolkata, Kharagpur, Hyderabad.
+        </p>
+        </div>
       </div>
     </div>
   </div>
  </div>
 <!-- products and services section ends here-->
+</div>
