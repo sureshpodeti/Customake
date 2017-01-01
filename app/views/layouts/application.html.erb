@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'manufacturers_profile' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'homepage', 'data-turbolinks-track': 'reload' %>
-
+    <%= favicon_link_tag 'logo.ico' %>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;background-color:#FEFEFF;">
@@ -73,7 +73,7 @@
       <div class="footer-left">
 
 
-        <%= image_tag("logo.jpg", :size => '120x120') %>
+        <%= image_tag("logo.png", :size => '120x120') %>
 
         <p class="footer-links">
           <%= link_to "Home", root_path %>
