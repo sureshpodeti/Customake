@@ -12,9 +12,8 @@
     <%= favicon_link_tag 'logo.ico' %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" style="padding-top: 50px;background-color:#FEFEFF;">
-  <br>
-<nav class="navbar navbar-default navbar-fixed-top">
+  <body>
+ <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
   <div class="navbar-header">
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-  	<%= link_to "NthPointDesign", root_path, class: "navbar-brand", style: "color:brown;font-weight:bold;" %>
+    <%= link_to "NthPointDesign", root_path, class: "navbar-brand", style: "color:brown;font-weight:bold;" %>
   </div>
 
 
@@ -44,10 +43,16 @@
  -->  <li><%= link_to "Contact Us", contacts_path %></li>
   </ul>
 
-  	</div>
+    </div>
   </div>
   </nav>
 
+
+
+
+
+
+<!-- navbar end-->
 
 	   <div class="container">
         <div class="row">
@@ -68,69 +73,135 @@
       </div>
 
 
-            <footer class="footer-distributed">
+            <!-- *** FOOTER ***
+ _________________________________________________________ -->
+        <div id="footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Pages</h4>
 
-      <div class="footer-left">
+                        <ul>
+                            <li><%= link_to "About us", about_us_path %></a>
+                            </li>
+                            <li><a href="text.html">Terms and conditions</a>
+                            </li>
+                            <li><%= link_to "FAQ", faqs_path %>
+                            </li>
+                            <li><%= link_to "Contact us", contacts_path%>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <h4>User section</h4>
+
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                            </li>
+                            <li><a href="register.html">Register</a>
+                            </li>
+                        </ul>
+
+                        <hr class="hidden-md hidden-lg hidden-sm">
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+
+                        <h4>Top categories</h4>
+
+                        <h5>Boys</h5>
+
+                        <ul>
+                            <li><%= link_to "T-shirts" %>
+                            </li>
+                            <li><%= link_to "SweatShirts"%>
+                            </li>
+                        </ul>
+
+                        <h5>Ladies</h5>
+                        <ul>
+                            <li><%= link_to "T-shirts"%>
+                            </li>
+                            <li><%= link_to "SweatShirts"%>
+                        </ul>
+                        <hr class="hidden-md hidden-lg">
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-6">
+
+                        <h4>Where to find us</h4>
+
+                        <p><strong>NthPointDesign</strong>
+                            <br>87/2, First Floor
+                            <br>6th Cross
+                            <br>2nd Main
+                            <br>SG PALYA
+                            <br>
+                            <strong>Bengaluru-560029</strong>
+                        </p>
+
+                        <%= link_to "Go to contact page", contacts_path %>
+
+                        <hr class="hidden-md hidden-lg">
+
+                    </div>
+                    <!-- /.col-md-3 -->
 
 
-        <%= image_tag("logo.png", :size => '120x120') %>
 
-        <p class="footer-links">
-          <%= link_to "Home", root_path %>
-          ·
-          <%= link_to "Order", customer_profiles_path %>
-          ·
-          <%= link_to "Manufacture", manufacturer_profiles_path%>
+                    <div class="col-md-3 col-sm-6">
 
-          ·
-          <%= link_to "Competitions", competitor_profiles_path%>
+                        <h4>Get the news</h4>
 
-          ·
-          <%= link_to "Careers", careers_path%>
-        </p>
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-        <p class="footer-company-name">NthPointDesign © 2016</p>
-      </div>
+                        <form>
+                            <div class="input-group">
 
-      <div class="footer-center">
+                                <input type="text" class="form-control">
 
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>87/2, 6th cross, 2nd main, SG Palya</span> Bengaluru-560029</p>
+                                <span class="input-group-btn">
+
+                <button class="btn btn-default" type="button">Subscribe!</button>
+
+            </span>
+
+                            </div>
+                            <!-- /input-group -->
+                        </form>
+
+                        <hr>
+
+                        <h4>Stay in touch</h4>
+
+                        <p class="social">
+                        <%= link_to "https://www.facebook.com/nthpointdesign/", :target => "_blank"  do %>
+                           <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <% end%>
+                            <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
+                        </p>
+
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
         </div>
+        <!-- /#footer -->
 
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>+91-9083519088</p>
-        </div>
-
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p>info@nthpointdesign.com</p>
-        </div>
-
-      </div>
-
-      <div class="footer-right">
-
-        <p class="footer-company-about">
-          <span>About the company</span>
-          NthPointDesign ensures you own a t-shirt of your style and choice. We also help you discover your desiging skills with an amazing platform through online competitions. You are one step closer to the future of t-shirt services.
-        </p>
-
-        <div class="footer-icons">
-
-          <!-- <a href="#"><i class="fa fa-facebook"></i></a> -->
-          <%= link_to "https://www.facebook.com/nthpointdesign/", :target => "_blank"  do %>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <% end%>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-
-        </div>
-
-      </div>
-
-    </footer>
+        <!-- *** FOOTER END *** -->
 
 
 
