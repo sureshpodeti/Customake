@@ -105,21 +105,11 @@
                     <div class="same-height-row">
                         <div class="col-sm-4">
                             <div class="box same-height clickable" style="height: 200px;">
-                                <div class="icon"><i class="fa fa-heart"></i>
-                                </div>
-
-                                <h3><a href="#">We love our customers</a></h3>
-                                <p>We are known to provide best possible service ever</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="box same-height clickable" style="height: 200px;">
                                 <div class="icon"><i class="fa fa-tags"></i>
                                 </div>
 
-                                <h3><a href="#">Best prices</a></h3>
-                                <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                                <h3><b>Best Prices</b></h3>
+                                <p style="color: red;font-size: 15px;"><i><b>We offer 10 % Discount on order of minimum 6 T-shirts of same design</b></i></p>
                             </div>
                         </div>
 
@@ -128,8 +118,18 @@
                                 <div class="icon"><i class="fa fa-thumbs-up"></i>
                                 </div>
 
-                                <h3><a href="#">100% satisfaction guaranteed</a></h3>
-                                <p>Free returns on everything for 3 months.</p>
+                                <h3><b>100% satisfaction Guaranteed</b></h3>
+                                <p style="color: blue;font-size: 15px;"><i><b>We offer high quality t shirts of GSM-180 with best possible printing quality</b></i></p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable" style="height: 200px;">
+                                <div class="icon"><i class="fa fa-thumbs-up"></i>
+                                </div>
+
+                                <h3><b>College Volunteer</b></h3>
+                                <p style="color: green;font-size: 15px;"><i><b>Help us to server you better by sharing your precious memories with us at info@nthpointdesign.com</b></i></p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
             <br><br>
             <div class="row" >
             <div class="col-md-10 col-md-offset-1 text-center" style="background-color:white;box-shadow: 1px 1px grey;">
-                    <h2> Colleges</h2>
+                    <h2 style="color: #269de7;"><b> Colleges</b></h2>
 
             </div>
 
@@ -278,9 +278,17 @@
 
 
             <!-- new arriaval section starts here-->
-            <div class="container" style="background-color: green;">
+            <div class="container" style="background-color: #EAECEB;">
     <div class="row">
         <!-- Carousel -->
+        <div class="container text-center">
+        <div class="col-md-10 col-md-offset-1 text-center" style="background-color:white;box-shadow: 1px 1px grey;">
+                    <h2 style="color:  #e74726;"><b>Featured products</b></h2>
+
+            </div>
+
+        </div> <br></div>
+        <div class="row">
         <div id="carousel-new-arrival" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -323,6 +331,9 @@
                                   </div>
                 </div>
             </div>
+            <br><br>
+            <br><br>
+
 
         </div><!-- /carousel -->
     </div>
@@ -331,60 +342,7 @@
 
             <!-- today ends-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br>
-
-
-
-                <!-- second row starts here-->
-                <div class="row">
-                    <!-- second row column-1 starts -->
-                    <div class="col-md-3">
-                         <div class="hit-the-floor">
-                        <ul>
-                            <li>5% DISCOUNT on bulk orders (5 No.s and more)</li><br>
-                            <li>5% DISCOUNT if you participate in atleast one competition </li>
-                        </ul>
-                    </div>
-                    </div>
-                    <!-- second row column-1 ending-->
-
-
-
-                    <!-- second row column-2 starting-->
-                    <div class="col-md-9">
-                    <% (0..11).each do |i|%>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <% image = "samp"+i.to_s+".png"%>
-                            <%= image_tag(image, :size => "320x360") %>
-                            <div class="caption">
-                                <p><%= link_to "Front" %> | <%= link_to "Back" %></p>
-                                <h6><%= link_to "Christmas Sweatshirts" %>
-                                </h6>
-                                <p>₹900/- |
-                                <%= link_to "ORDER", customer_profiles_path %>
-                                </p>
-                            </div>
-                        </div>
-                      </div>
-                     <% end %>
-                </div>
-                <!-- second row column-2 ending-->
-                </div>
-                <!-- row-2 ends here-->
+<br><br><br><br>
 
         </div>
         <!-- container ends here-->
