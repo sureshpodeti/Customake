@@ -104,32 +104,32 @@
                 <div class="container">
                     <div class="same-height-row">
                         <div class="col-sm-4">
-                            <div class="box same-height clickable" style="height: 200px;background-color:  #dabee3; ">
+                            <div class="box same-height clickable" style="height: 200px;">
                                 <!-- <div class="icon"><i class="fa fa-tags"></i>
                                 </div> -->
 
                                 <h3><b>Best Prices</b></h3>
-                                <p style="color: red;font-size: 15px;"><i><b>We offer 10 % Discount on order of minimum 6 T-shirts of same design</b></i></p>
+                                <p style="color:   #1634e8;font-size: 15px; font-family:Georgia, serif;"><b>We offer 10 % Discount on order of minimum 6 T-shirts of same design</b></p>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="box same-height clickable" style="height: 200px;background-color:  #c8e8c4;">
+                            <div class="box same-height clickable" style="height: 200px;">
                                 <!-- <div class="icon"><i class="fa fa-thumbs-up"></i>
                                 </div> -->
 
                                 <h3><b>100% satisfaction Guaranteed</b></h3>
-                                <p style="color: blue;font-size: 15px;"><i><b>We offer high quality t shirts of GSM-180 with best possible printing quality</b></i></p>
+                                <p style="color: #1634e8;font-size: 15px;font-family:Georgia, serif;"><b>We offer high quality t shirts of GSM-180 with best possible printing quality</b></p>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="box same-height clickable" style="height: 200px;background-color: #f1f1bf;">
+                            <div class="box same-height clickable" style="height: 200px;">
                                 <!-- <div class="icon"><i class="fa fa-thumbs-up"></i>
                                 </div> -->
 
                                 <h3><b>College Volunteer</b></h3>
-                                <p style="color: green;font-size: 15px;"><i><b>Help us to server you better by sharing your precious memories with us at info@nthpointdesign.com</b></i></p>
+                                <p style="color: #1634e8;font-size: 15px;font-family:Georgia, serif;"><i><b>Help us to serve you better by sharing your precious memories with us at info@nthpointdesign.com</b></i></p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
         </div>
 
     </figcaption>
-    <%= link_to "", faqs_path%>
+    <%= link_to "", kgpians_path%>
 </figure>
                 </div>
 
@@ -214,7 +214,7 @@
     <%= image_tag("nitrr.jpg", class: "image-responsive", :size => "500x200")%>
     <figcaption>
         <div class="text-center">
-            <h3>NIT Ranchi</h3>
+            <h3>NIT Raipur</h3>
             <p>Chattisgarh</p>
         </div>
     </figcaption>
@@ -299,39 +299,42 @@
             <div class="carousel-inner">
                 <div class="item active">
                 <div class="row">
+                                <% (0..3).each do |i|%>
                                   <div class="col-md-3">
-                                      <%= image_tag("temposhout.jpg", :size => "300x350")%>
+                                      <div class = "thumbnail">
+                                      <% image = "temposhout" + i .to_s+ ".jpg"%>
+                                      <%= image_tag(image, :size => "300x350")%>
+                                      </div>
+                                      <div class="caption">
+                                       <% id = "NPD"+(i+1).to_s%>
+                                        <p style="color: blue;"><%= id %></p><p style="font-size:20px;"><b>₹. 299/-</b> |  <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+                                    </div>
                                   </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("temposhout1.jpg", :size => "300x350")%>
-                                  </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("temposhout2.jpg", :size => "300x350")%>
-                                  </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("temposhout3.jpg", :size => "300x350")%>
-                                  </div>
+                                  <% end %>
+
+
                                 </div>
 
 
                 </div>
                 <div class="item">
                     <div class="row">
+                              <% (0..3).each do |i|%>
                                   <div class="col-md-3">
-                                      <%= image_tag("kgp0.jpg", :size => "300x350")%>
-                                  </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("kgp1.jpg", :size => "300x350")%>
-                                  </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("kgp2.jpg", :size => "300x350")%>
-                                  </div>
-                                  <div class="col-md-3">
-                                     <%= image_tag("kgp3.jpg", :size => "300x350")%>
-                                  </div>
+                                      <div class="thumbnail">
+                                          <% image = "kgp" + i .to_s+ ".jpg"%>
+                                        <%= image_tag(image, :size => "300x350")%>
+                                      </div>
+
+                                      <div class="caption">
+                                         <% id = "NPD"+(i+5).to_s%>
+                                        <p style="color:blue;"><%= id %></p><p style="font-size:20px;"><b>₹. 299/-</b> | <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+                                    </div>
+
                 </div>
+                <% end %>
             </div>
-            <br><br>
+            </div>
             <br><br>
 
 

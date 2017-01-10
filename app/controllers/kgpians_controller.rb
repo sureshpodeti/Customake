@@ -1,0 +1,2 @@
+class KgpiansController < ApplicationController
+end

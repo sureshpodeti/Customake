@@ -1,0 +1,2 @@
+module KgpiansHelper
+end
