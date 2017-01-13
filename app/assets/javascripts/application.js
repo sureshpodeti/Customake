@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require easyzoom
 //= require_tree .
 //= require bootstrap-sprockets
 
@@ -86,7 +87,10 @@ $(document).on('turbolinks:load', function(){
 
 
 
+var $easyzoom = $('.easyzoom').easyZoom();
 
+// Get an instance API
+var api = $easyzoom.data('easyZoom');
 
 
 

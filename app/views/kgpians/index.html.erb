@@ -1,9 +1,59 @@
-<h1>hello kgpian !</h1>
+<h1 class="text-center">Hello kgpian !</h1>
 
-<nav>
-  <ul>
-    <li><a href="#">Navigation</a></li>
-    <li><a href="#">Menu</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
+
+<div class="container">
+	<div class="row text-center" style="background-color:  #d6d7c2  ;">
+	  <h3>Week Special</h3>
+	</div> <br><br>
+	<div class="row text-center">
+	<div class="col-md-3">
+
+
+		<div class="thumbnail">
+		<%= easy_zoom_tag(zoom: 'temposhout0.jpg', standard: 'temposhout0.jpg', class: 'easyzoom easyzoom--overlay') %>
+
+          <div class="caption">
+              <p style="color: blue;">NPD1</p><p style="font-size:20px;"><b>₹. 599/-</b> |  <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+          </div>
+      </div>
+
+	</div>
+	<div class="col-md-3">
+		<div class="thumbnail">
+		<%= easy_zoom_tag(zoom: 'kgp1.jpg', standard: 'kgp1.jpg', class: 'easyzoom easyzoom--overlay') %>
+
+          <div class="caption">
+              <p style="color: blue;">NPD4</p><p style="font-size:20px;"><b>₹. 599/-</b> |  <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+          </div>
+      </div>
+	</div>
+	<div class="col-md-3">
+		<div class="thumbnail">
+		 <%= easy_zoom_tag(zoom: 'temposhout2.jpg', standard: 'temposhout2.jpg', class: 'easyzoom easyzoom--overlay') %>
+          <div class="caption">
+              <p style="color: blue;">NPD3</p><p style="font-size:20px;"><b>₹. 599/-</b> |  <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+          </div>
+      </div>
+
+	</div>
+
+	<div class="col-md-3">
+		<div class="thumbnail">
+		  <%= easy_zoom_tag(zoom: 'kgp0.jpg', standard: 'kgp0.jpg', class: 'easyzoom easyzoom--overlay') %>
+          <div class="caption">
+                                        <p style="color: blue;">NPD5</p><p style="font-size:20px;"><b>₹. 599/-</b> |  <%= link_to "ORDER", customer_profiles_path, class: "btn btn-success  btn-md"%></p>
+          </div>
+      </div>
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+
+<%(0..20).each do |i|%>
+	<br>
+<% end %>
